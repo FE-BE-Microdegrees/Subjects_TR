@@ -58,5 +58,3 @@ marp: true
 
 ---
 # Programlama Nedir?
-
-```
