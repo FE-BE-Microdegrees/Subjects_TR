@@ -11,3 +11,18 @@
 - Github
 - Documentation
 - Algorithms
+
+ 
+# Ders 2
+
+- Giriş
+- Geçen dersin geri bildirimi
+- Markdown
+- Operatörler
+- İfadeler
+- Veri Türleri
+  - Boolean
+- Koşullu İfadeler
+- Github
+- Belgelendirme
+- Algoritmalar
