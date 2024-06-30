@@ -33,15 +33,19 @@ By the end of the course, students should be adept at the principles of server a
 - JWT
 - Testing
 - Deployment
+  
 # Arka Yüz Çerçeveleri
+
 "Arka Uç Çerçeveleri", günümüzün sunucu tarafı uygulama geliştirmesine yönelik metodolojiler, araçlar ve en iyi uygulamalar üzerine derinlemesine bir keşif sunar. Öğrenciler, yönlendirme, ara katman yazılımı, kimlik doğrulama ve veritabanı işlemleri gibi temel kavramlara dalacaklar. Kurs boyunca öğrenciler, gerçek dünya senaryolarında dağıtıma hazır, yüksek performanslı ve güvenli uygulamalar inşa ederek pratik projelerle meşgul olacaklar. Bu yolculuk, modern arka uç geliştirme ile ilgili geniş araç seti ve ekosistemle de tanışmalarını sağlayacak.
 
 ## Açıklama
+
 **Kredi**: 4 AKTS (4 x 26 saat)
 **Dersin Amaçları**: "Arka Uç Çerçeveleri" dersinin amacı, öğrencilerin modern arka uç çerçevelerini kullanarak sağlam, ölçeklenebilir ve güvenli sunucu tarafı uygulamaları geliştirme yeteneklerini geliştirmektir.
 Kursun sonunda öğrenciler, sunucu mimarisi, API geliştirme, veritabanı entegrasyonu ve çağdaş arka uç geliştirme ile ilgili daha geniş ekosistem konularında yetkin olmalıdır.
 
 ## Öğrenme Çıktıları
+
 **Sunucu Yapısı**: Ölçeklenebilir uygulamaları yapılandırmak için çerçeve yeteneklerini kullanarak sunucu mimarilerini anlamak ve uygulamak.
 **Yönlendirme ve Ara Katman Yazılımı**: Çeşitli istek türlerini işlemek için yönlendirme mekanizmalarını kullanmak ve istek/yanıt işlemleri için ara katman yazılımlarını kullanmak.
 **Veritabanı Entegrasyonu**: Sunucu tarafı uygulamaları ilişkisel ve ilişkisel olmayan veritabanlarına bağlamak, CRUD işlemlerini yürütmek ve ORM/ODM paradigmalarını anlamak.
@@ -53,6 +57,7 @@ Kursun sonunda öğrenciler, sunucu mimarisi, API geliştirme, veritabanı enteg
 **Sürekli Entegrasyon/Sürekli Dağıtım (CI/CD)**: CI/CD boru hattını anlamak ve arka uç geliştirme iş akışına entegre etmek.
 
 ## Konular
+
 - API
 - REST
 - Express.JS
