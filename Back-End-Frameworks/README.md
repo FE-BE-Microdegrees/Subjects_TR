@@ -46,15 +46,15 @@ Kursun sonunda öğrenciler, sunucu mimarisi, API geliştirme, veritabanı enteg
 
 ## Öğrenme Çıktıları
 
-**Sunucu Yapısı**: Ölçeklenebilir uygulamaları yapılandırmak için çerçeve yeteneklerini kullanarak sunucu mimarilerini anlamak ve uygulamak.
-**Yönlendirme ve Ara Katman Yazılımı**: Çeşitli istek türlerini işlemek için yönlendirme mekanizmalarını kullanmak ve istek/yanıt işlemleri için ara katman yazılımlarını kullanmak.
-**Veritabanı Entegrasyonu**: Sunucu tarafı uygulamaları ilişkisel ve ilişkisel olmayan veritabanlarına bağlamak, CRUD işlemlerini yürütmek ve ORM/ODM paradigmalarını anlamak.
-**Kimlik Doğrulama ve Yetkilendirme**: Uygulamaları güvence altına almak için kimlik doğrulama ve yetkilendirme stratejilerini uygulamak, oturumlar, belirteçler ve OAuth mekanizmalarını anlamak.
-**API Geliştirme**: Uç nokta yapısı, veri doğrulama ve hata işleme için en iyi uygulamalara vurgu yaparak RESTful API'leri tasarlamak ve geliştirmek.
-**Hata İşleme**: Çeşitli hata türlerini ve senaryolarını yönetmek ve yanıtlamak için kapsamlı hata işleme stratejilerini uygulamak.
-**Dağıtım ve Üretim**: Dağıtım süreçleri, ortam yapılandırmaları ve bir arka uç uygulamasının üretime taşınmasının incelikleri ile tanışmak.
-**Güvenlik Önlemleri**: SQL enjeksiyonu, CSRF gibi potansiyel güvenlik açıklarını anlamak ve bunlara karşı koruma sağlamak için çeşitli güvenlik önlemlerini uygulamak.
-**Sürekli Entegrasyon/Sürekli Dağıtım (CI/CD)**: CI/CD boru hattını anlamak ve arka uç geliştirme iş akışına entegre etmek.
+- **Sunucu Yapısı**: Ölçeklenebilir uygulamaları yapılandırmak için çerçeve yeteneklerini kullanarak sunucu mimarilerini anlamak ve uygulamak.
+- **Yönlendirme ve Ara Katman Yazılımı**: Çeşitli istek türlerini işlemek için yönlendirme mekanizmalarını kullanmak ve istek/yanıt işlemleri için ara katman yazılımlarını kullanmak.
+- **Veritabanı Entegrasyonu**: Sunucu tarafı uygulamaları ilişkisel ve ilişkisel olmayan veritabanlarına bağlamak, CRUD işlemlerini yürütmek ve ORM/ODM paradigmalarını anlamak.
+- **Kimlik Doğrulama ve Yetkilendirme**: Uygulamaları güvence altına almak için kimlik doğrulama ve yetkilendirme stratejilerini uygulamak, oturumlar, belirteçler ve OAuth mekanizmalarını anlamak.
+- **API Geliştirme**: Uç nokta yapısı, veri doğrulama ve hata işleme için en iyi uygulamalara vurgu yaparak RESTful API'leri tasarlamak ve geliştirmek.
+- **Hata İşleme**: Çeşitli hata türlerini ve senaryolarını yönetmek ve yanıtlamak için kapsamlı hata işleme stratejilerini uygulamak.
+- **Dağıtım ve Üretim**: Dağıtım süreçleri, ortam yapılandırmaları ve bir arka uç uygulamasının üretime taşınmasının incelikleri ile tanışmak.
+- **Güvenlik Önlemleri**: SQL enjeksiyonu, CSRF gibi potansiyel güvenlik açıklarını anlamak ve bunlara karşı koruma sağlamak için çeşitli güvenlik önlemlerini uygulamak.
+- **Sürekli Entegrasyon/Sürekli Dağıtım (CI/CD)**: CI/CD boru hattını anlamak ve arka uç geliştirme iş akışına entegre etmek.
 
 ## Konular
 
