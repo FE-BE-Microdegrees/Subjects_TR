@@ -29,13 +29,10 @@ marp: true
 ---
 # What is Programming?
 
-```markdown
 ---
-marp: true
 ---
-# Ön Uç Mikro Derecesi
+# Ön Yüz Mikro Dersi
 
----
 # Ders 1
 
 - Giriş
