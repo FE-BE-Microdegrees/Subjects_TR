@@ -28,3 +28,32 @@
   - Understanding CDN
 - Practical Exercises
 
+# Ağ Bağlantısı
+
+- Temel Ağ Kavramları
+  - IP Adresleri ve Portların Anlaşılması
+  - Protokollerin Anlaşılması
+  - Alan Adları ve DNS
+- İstemci-Sunucu Yapısı
+  - İstemci-Sunucu Modeli
+  - Durumlu ve Durumsuz Protokoller
+- HTTP/S Protokolü
+  - HTTP Metodları
+  - HTTP Durum Kodları
+  - HTTP Başlıkları
+- RESTful API'lar
+  - REST'in Anlaşılması
+  - API'ların Tüketilmesi
+- Güvenlik
+  - SSL/TLS
+  - CORS
+- Performans
+  - Gecikme Süresi ve Bant Genişliği
+  - Önbellekleme
+- Hata Ayıklama ve Araçlar
+  - Ağ Hata Ayıklama Araçları
+  - API Test Etme
+- Bulut Bilişim ve Dağıtım
+  - Temel Bulut Kavramları
+  - CDN'in Anlaşılması
+- Çalışma Pratiği
