@@ -34,3 +34,40 @@ Upon completion, students should be adept at data modeling, understanding databa
 - Migrations
 - Seeding data
 - Database security
+
+# Veritabanları
+
+## Açıklama
+
+"Veritabanları", günümüz teknolojik altyapılarının merkezi olan veri depolama, manipülasyon ve geri getirme sistemlerinin derinlemesine incelenmesini sunar. Öğrenciler, veri modelleri, normalizasyon ve SQL gibi temel kavramları öğrenecekler. Teorik dersler ve pratik alıştırmaların bir karışımı aracılığıyla, öğrenciler gerçek dünya senaryolarında veritabanı sistemlerini tasarlayıp yönetecekler, verimlilik, ölçeklenebilirlik ve güvenliği sağlayacaklar.
+
+- **Kredi**: 4 ECTS (4 x 26 saat)
+- **Dersin Amacı**: "Veritabanları" dersinin amacı, öğrencilere veritabanı tasarımı, uygulaması ve yönetimi konusunda temel bilgi ve pratik deneyim sağlamaktır.
+
+Tamamlandığında, öğrenciler veri modelleme, veritabanı mimarilerini anlama, sorguları optimize etme ve hem ilişkisel hem de ilişkisel olmayan veritabanı sistemlerinde veri bütünlüğünü ve güvenliğini sağlama konularında yetkin olmalıdır.
+
+## Öğrenme Çıktıları
+- **Veri Modelleme**: Veritabanı şemalarını tasarlamak ve uygulamak, Varlık-İlişki (ER) modellerini ve normalizasyon süreçlerini anlamak.
+- **SQL Yetkinliği**: İlişkisel veritabanlarında veri oluşturma, okuma, güncelleme ve silme işlemleri için SQL sorguları oluşturmak ve yürütmek.
+- **Veritabanı Yapıları**: İlişkisel, NoSQL ve dağıtık sistemler dahil olmak üzere çeşitli veritabanı mimarilerini ayırt etmek.
+- **Güvenlik**: Kimlik doğrulama, yetkilendirme, şifreleme ve SQL enjeksiyonuna karşı koruma gibi kavramları anlayarak veritabanı güvenlik önlemlerini uygulamak.
+- **Saklı Yordamlar ve Tetikleyiciler**: Veritabanı işlemlerini otomatikleştirmek için saklı yordamlar ve tetikleyiciler tasarlamak ve uygulamak.
+- **Veritabanı Evrimi**: Veritabanı şemalarını zaman içinde veri bütünlüğünü koruyarak taşımak ve evrimleştirmek.
+- **Gerçek Dünya Uygulamaları**: Veritabanı kavramlarını web uygulamaları, veri analitiği ve diğer modern teknolojik bağlamlarda anlayarak gerçek dünya senaryolarında uygulamak.
+
+## Konular
+- Veritabanları
+- SQL
+- MySQL
+- Araçlar
+- Ortamı Kurma
+- Veri Tipleri
+- Tablolar
+- MySQL sözdizimi ve komutları
+- Veri normalizasyonu
+- Varlık-İlişki (ER) diyagramları
+- İleri SQL sorguları
+- MySQL yönetimi
+- Taşımalar
+- Veri tohumlama
+- Veritabanı güvenliği
