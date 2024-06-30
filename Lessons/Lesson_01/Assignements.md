@@ -4,7 +4,7 @@
 
 > How much time should I spend on this assignement?
 >
-> # Ödevler
+> ## Ödevler
 
 ## Ödev 1
 
