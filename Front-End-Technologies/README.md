@@ -28,7 +28,7 @@ By the end of the course, students should be proficient in key front-end technol
 - Web accessibility
 - User experience
 
-  # Ön Uç Teknolojileri
+  # Ön Yüz Teknolojileri
 
 **"Ön Yüz Teknolojileri"** günümüz web arayüzlerini yönlendiren araçlar, teknikler ve en iyi uygulamalar üzerine kapsamlı bir keşif sunar. Bu ders, öğrencileri web geliştirme üçlüsü ile tanıştırır: İçerik yapısı için HTML, stil ve düzen için CSS ve etkileşim ve dinamik davranış için JavaScript. Teori ve uygulamalı pratiklerin bir karışımıyla, öğrenciler hem görsel olarak çekici hem de işlevsel olarak sağlam web sayfaları ve uygulamaları tasarlayıp kodlamaya yönelik projeler üstlenecekler. Bu kurs, hızla gelişen web geliştirme ve kullanıcı deneyimi tasarımı alanına bir geçit görevi görür.
 
