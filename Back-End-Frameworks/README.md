@@ -40,8 +40,9 @@ By the end of the course, students should be adept at the principles of server a
 
 ## Açıklama
 
-**Kredi**: 4 AKTS (4 x 26 saat)
-**Dersin Amaçları**: "Arka Uç Çerçeveleri" dersinin amacı, öğrencilerin modern arka uç çerçevelerini kullanarak sağlam, ölçeklenebilir ve güvenli sunucu tarafı uygulamaları geliştirme yeteneklerini geliştirmektir.
+- **Kredi**: 4 AKTS (4 x 26 saat)
+
+- **Dersin Amaçları**: "Arka Uç Çerçeveleri" dersinin amacı, öğrencilerin modern arka uç çerçevelerini kullanarak sağlam, ölçeklenebilir ve güvenli sunucu tarafı uygulamaları geliştirme yeteneklerini geliştirmektir.
 Kursun sonunda öğrenciler, sunucu mimarisi, API geliştirme, veritabanı entegrasyonu ve çağdaş arka uç geliştirme ile ilgili daha geniş ekosistem konularında yetkin olmalıdır.
 
 ## Öğrenme Çıktıları
