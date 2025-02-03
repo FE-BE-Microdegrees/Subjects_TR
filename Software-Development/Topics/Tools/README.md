@@ -148,3 +148,140 @@ In the context of software development, tools encompass a wide range of software
 
 ## Excercises and Assignments
 
+# Araçlar
+
+- [Araçlar](#ara%C3%A7lar)
+  - [Öğrenim Çıktıları](#%C3%B6%C4%9Frenim-%C3%A7%C4%B1kt%C4%B1lar%C4%B1)
+  - [Egzersizler ve Ödevler](#egzersizler-ve-%C3%B6devler)
+
+## Öğrenim Çıktıları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+
+- Yazılım geliştirmede kullanılan farklı araç türlerini tanımlayın;
+- Yazılım geliştirmede kullanılan çeşitli araçları açıklayın;
+- Yazılım geliştirmede farklı araçları kullanın.
+
+Yazılım geliştirme bağlamında araçlar, yazılım geliştirme yaşam döngüsünün (*SDLC*) çeşitli aşamalarında geliştiricilere yardımcı olmak için kullanılan bir dizi yazılım uygulaması, kütüphane, framework ve yardımcı programı kapsar. Bu araçlar süreçleri hızlandırmak, verimliliği artırmak, kod kalitesini sağlamak ve iş birliğini kolaylaştırmak için tasarlanmıştır. İşte yazılım geliştirmede yaygın olarak kullanılan araç türlerinin bir genel bakışı:
+
+- **Entegre Geliştirme Ortamları (IDEs):**
+    - **Amacı:** Kod yazma ve düzenleme için hafif araçlar, genellikle script veya web geliştirme için kullanılır. Geliştiricilerin kullandığı ilk araçlardan biridir.
+    - **Örnekler:** 
+      - [Eclipse](https://www.eclipse.org/) 
+      - [Visual Studio](https://visualstudio.microsoft.com/)
+      - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+      - [PyCharm](https://www.jetbrains.com/pycharm/)
+      - [Xcode](https://developer.apple.com/xcode/)
+
+- **Versiyon Kontrol Sistemleri:**
+    - **Amacı:** Kodda yapılan değişiklikleri zaman içinde izler ve yönetir. Kod, yazılım geliştirmede dikkatle korunması gereken kritik bir varlıktır. Versiyon kontrol sistemleri geliştiricilerin kolayca iş birliği yapmalarını, değişiklikleri takip etmelerini ve gerekirse uygulamanın önceki sürümlerini geri yüklemelerini sağlar.
+    - **Örnekler:** 
+      - [Git](https://git-scm.com/)
+      - [Mercurial](https://www.mercurial-scm.org/)
+      - [Subversion (SVN)](https://subversion.apache.org/)
+      - [CVS](https://www.gnu.org/software/trans-coord/manual/cvs/cvs.html)
+
+- **Build Araçları:**
+    - **Amacı:** Uygulamaların derlenme ve build edilme süreçlerini otomatikleştirir.
+    - **Örnekler:** Maven, Gradle, Ant, Make.
+
+- **Sürekli Entegrasyon/Sürekli Dağıtım (CI/CD) Araçları:**
+    - **Amacı:** Uygulamaların derlenme, test edilme ve dağıtım süreçlerini otomatikleştirir. Günümüzde geliştirme süreçleri küçük ve hızlı adımlarla gerçekleştirilme eğilimindedir. Tüm bu adımları her güncelleme yapıldığında manuel olarak yapmak çok zaman alır ve hata yapma olasılığı artar. CI/CD araçları bu süreci otomatikleştirir, hızlandırır ve hataların olasılığını azaltır.
+    - **Örnekler:** 
+      - [Jenkins](https://www.jenkins.io/)
+      - [Travis CI](https://www.travis-ci.com/)
+      - [CircleCI](https://circleci.com/)
+      - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
+
+- **Bağımlılık Yönetim Araçları:**
+    - **Amacı:** Yazılım bağımlılıklarını ve kütüphanelerini yönetir.
+    - **Örnekler:** npm (Node.js), pip (Python), Maven (Java), NuGet (.NET).
+
+- **Test Araçları:**
+    - **Amacı:** Yazılım kalitesini, performansını ve güvenliğini otomatik olarak test eder. Uygulamalar geliştikçe içerdikleri hataların fark edilmemesi riski artar. Manuel olarak yapılan kontroller zaman alıcı ve pahalıdır. Çeşitli araçlar bu süreci otomatikleştirir.
+    - **Unit Test:** 
+      - [JUnit (Java)](https://junit.org/junit5/)
+      - [NUnit (.NET)](https://nunit.org/)
+      - [Pytest (Python)](https://docs.pytest.org/en/8.0.x/)
+    - **Fonksiyonel/End-to-End Test:** 
+      - [Selenium](https://www.selenium.dev/)
+      - [Cypress](https://www.cypress.io/)
+      - [Protractor](https://www.protractortest.org/#/)
+    - **Performans Testi:**
+      - [JMeter](https://jmeter.apache.org/)
+      - [LoadRunner](https://www.microfocus.com/en-us/products/loadrunner-professional/overview)
+
+- **Kod Kalitesi ve İnceleme Araçları:**
+    - **Amacı:** Kod kalitesini, stilini ve potansiyel sorunlarını analiz eder.
+    - **Örnekler:** 
+      - [SonarQube](https://www.sonarsource.com/products/sonarqube/)
+      - [ESLint](https://eslint.org/)
+      - [Pylint](https://pypi.org/project/pylint/)
+      - [CodeClimate](https://codeclimate.com/quality)
+
+- **Paket Yöneticileri:**
+    - **Amacı:** Belirli programlama dilleri için kütüphaneleri ve modülleri yönetir ve düzenler.
+    - **Örnekler:** npm, pip, Composer, RubyGems.
+
+- **Hata ve Görev Takip Sistemleri:**
+    - **Amacı:** Yazılım hatalarını ve görevlerini takip eder, yönetir ve önceliklendirir.
+    - **Örnekler:**
+      - [JIRA](https://www.atlassian.com/software/jira)
+      - [Bugzilla](https://www.bugzilla.org/)
+      - [GitHub Issues](https://github.com/features/issues)
+      - [Trello](https://trello.com/)
+
+- **Dokümantasyon Araçları:**
+    - **Amacı:** Yazılım dokümantasyonu oluşturur ve yönetir.
+    - **Örnekler:**
+      - [Doxygen](https://www.doxygen.nl/)
+      - [Sphinx](https://www.sphinx-doc.org/en/master/)
+      - [JSDoc](https://jsdoc.app/about-getting-started)
+
+- **Veritabanı Yönetim Araçları:**
+    - **Amacı:** Veritabanlarını tasarlar, yönetir ve iletişim kurar.
+    - **Örnekler:**
+      - [MySQL Workbench](https://www.mysql.com/products/workbench/)
+      - [pgAdmin](https://www.pgadmin.org/)
+      - [Microsoft SQL Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver16)
+
+- **Konteyner ve Sanallaştırma Araçları:**
+    - **Amacı:** Konteyner veya sanal ortamlar oluşturur, dağıtır ve yönetir.
+    - **Örnekler:**
+      - [Docker](https://www.docker.com/)
+      - [Kubernetes](https://kubernetes.io/)
+      - [VMware](https://www.vmware.com/)
+      - [VirtualBox](https://www.virtualbox.org/)
+
+- **Bulut Platformları ve Araçları:**
+    - **Amacı:** Bulut ortamlarında uygulamaları geliştirme, dağıtma ve ölçeklendirme.
+    - **Örnekler:**
+      - [AWS](https://aws.amazon.com/)
+      - [Google Cloud Platform](https://cloud.google.com/)
+      - [Microsoft Azure](https://azure.microsoft.com/en-us)
+      - [Heroku](https://www.heroku.com/)
+
+- **İşbirliği ve İletişim Araçları:**
+    - **Amacı:** Ekip iletişimini ve işbirliğini kolaylaştırır.
+    - **Örnekler:**
+      - [Slack](https://slack.com/) 
+      - [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) 
+      - [Zoom](https://zoom.us/)
+      - [Confluence](https://www.atlassian.com/software/confluence)
+
+- **Geliştirme Çerçeveleri ve Kütüphaneler:**
+    - **Amacı:** Daha verimli uygulama geliştirme için yapılandırılmış bir temel sağlar.
+    - **Örnekler:**
+      - [Angular](https://angular.io/)
+      - [React](https://react.dev/)
+      - [Vue.js](https://vuejs.org/)
+      - [Spring Boot (Java)](https://spring.io/guides/gs/spring-boot)
+
+- **Kod Editörleri:**
+    - **Amacı:** Kod yazmak ve düzenlemek için hafif araçlar.
+    - **Örnekler:**
+      - [Visual Studio Code](https://code.visualstudio.com/)
+      - [Sublime Text](https://www.sublimetext.com/)
+      - [Notepad++](https://notepad-plus-plus.org/)
+
+

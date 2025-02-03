@@ -63,3 +63,64 @@ Stakeholders are the people who have an interest in the software. They can be:
 
 ## Exercises
 
+# Gereksinimler
+
+Bu konuda, yazılım gereksinimlerinin ne olduğunu, neden önemli olduklarını ve nasıl yazıldıklarını keşfedeceğiz.
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+
+## Yazılım Gereksinimleri Nedir?
+
+Yazılım gereksinimleri, bir yazılım projesinin kapsamını tanımlayan *fonksiyonel* ve *fonksiyonel olmayan* gereksinimlerdir. Gereksinimler, yazılım geliştirme sürecinin önemli bir parçasıdır ve doğru şekilde ele alınması gereklidir. Gereksinimler, yazılımın beklenen davranışını tanımlar ve geliştirme sürecine yön vermek için kullanılır.
+
+**Fonksiyonel** gereksinimler, yazılımın ne yapması gerektiğini tanımlar. Yazılımın sahip olması gereken özellikler ve işlevselliklerdir. Örneğin, bir fonksiyonel gereksinim şu şekilde olabilir:
+- `yazılım, kullanıcıların giriş yapmasına izin vermelidir`;
+- `yazılım, kullanıcıların şifrelerini değiştirmelerine izin vermelidir`;
+- `yazılım, kullanıcıların şifrelerini sıfırlamalarına izin vermelidir`.
+
+**Fonksiyonel olmayan** gereksinimler, yazılımın bunu nasıl yapması gerektiğini tanımlar. Yazılımın sahip olması gereken kısıtlamalar ve sınırlamalardır (teknik gereksinimler de dahil). Örneğin, bir fonksiyonel olmayan gereksinim şu şekilde olabilir:
+- `yazılım, 1000 eşzamanlı kullanıcıyı desteklemelidir`;
+- `yazılım, şifreleri hash'lemek için bcrypt kullanmalıdır`;
+- `yazılım, Linux, Windows ve macOS üzerinde çalışabilmelidir`.
+
+Gereksinimler, farklı detay seviyelerinde tanımlanabilir. Örneğin, yüksek seviyeli bir gereksinim şu şekilde olabilir:
+- `yazılım, kullanıcıların giriş yapmasına izin vermelidir`.
+
+Daha detaylı bir gereksinim şu şekilde olabilir:
+- `yazılım, kullanıcıların e-posta adresi ve şifreleri ile giriş yapmalarına izin vermelidir`.
+
+Çok detaylı bir gereksinim şu şekilde olabilir:
+- `yazılım, kullanıcıların e-posta adresi ve şifreleri ile giriş yapmalarına izin vermelidir ve şifreyi veritabanına kaydetmeden önce bcrypt kullanarak hash'lemelidir`.
+
+### Kullanıcı Gereksinimleri ve Sistem Gereksinimleri
+
+Gereksinimleri *kullanıcı* gereksinimleri veya *sistem* gereksinimleri olarak da kategorize edebiliriz.
+
+**Kullanıcı gereksinimleri**, kullanıcının yazılımın ne yapmasını istediğini tanımlar. Kullanıcı gereksinimleri, kullanıcının kendi kelimeleriyle ve sistemin ne yapması veya nasıl görünmesi gerektiğini gösteren diyagramlar ve resimlerle yazılabilir. Kullanıcının perspektifinden yazılmalıdır.
+
+**Sistem gereksinimleri**, sistemin kullanıcı gereksinimlerini karşılamak için ne yapması gerektiğini tanımlar. Bu, sistemin işlevselliği, arabirimleri ve performansıyla ilgili daha ayrıntılı bir açıklamadır ve kullanıcı gereksinimlerini karşılamak için tam olarak ne gerektiğini tanımlar. Bu, sistemin ne yapması gerektiği ile ilgili daha teknik bir açıklamadır.
+
+> Gereksinimleri kategorize etmenin veya açıklamanın birçok farklı yolu vardır. En önemli şey, bunları yazmak ve net ve anlaşılır olduklarından emin olmaktır.
+>
+> Gereksinimlerimizi her zaman kullanıcılarımız ve paydaşlarımızla doğrulamalıyız. Onların ne istediklerini ve ihtiyaç duyduklarını anlamalı ve biz ne inşa ediyorsak, bunun ne olduğunu anlamalarını sağlamalıyız.
+
+## Yazılım Gereksinimleri Nasıl Geliştirilir?
+
+Gereksinimlerin geliştirilmesi sırasında, yapılacak yazılım ve mevcut (gerçek dünyada çalışan) sistemle ilgili bilgi toplanır.
+
+Kullanıcı gereksinimleri ve sistem gereksinimleri, toplanan bilgiler kullanılarak oluşturulur. Bunun için aşağıdaki faaliyetler yapılır:
+- ilgili alanla ilgili belgeler incelenir;
+- ilgilenen taraflarla iletişim kurulur;
+- benzer sistemler incelenir.
+
+### Paydaşlar
+
+Paydaşlar, yazılımla ilgisi olan kişilerdir. Bunlar şunlar olabilir:
+- kullanıcılar;
+- müşteriler;
+- yöneticiler;
+- iş analistleri;
+- ...
+

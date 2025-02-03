@@ -43,3 +43,48 @@ Note that in this way, we can only run files that are located inside the folder 
 
 
 ![Running Node](RunningNode.gif)
+
+# Node JS
+
+Bu konuda, Node JS hakkında bilgi edineceğiz.
+
+- [Node JS](#node-js)
+  - [Öğrenme Çıktıları](#öğrenme-çıktıları)
+  - [Node JS Nedir?](#node-js-nedir)
+  - [Neden Node JS Kullanılır?](#neden-node-js-kullanılır)
+  - [Node JS Nasıl Kurulur?](#node-js-nasıl-kurulur)
+  - [Node JS Nasıl Çalıştırılır?](#node-js-nasıl-çalıştırılır)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra:
+- Node JS'in ne olduğunu açıklayabileceksiniz;
+- Node JS'in neden popüler olduğunu açıklayabileceksiniz;
+- Bilgisayarınıza Node JS kurabileceksiniz;
+- Node JS programlarını çalıştırabileceksiniz.
+
+## Node JS Nedir?
+
+**NodeJS**, Javascript kodlarını web tarayıcısı dışında çalıştırmamıza olanak tanıyan bir Javascript çalışma ortamıdır. NodeJS bir sunucu tarafı dilidir, yani bir sunucuda çalışır ve tarayıcıda çalışan Javascript'ten farklı olarak bilgisayarın dosya sistemine erişim sağlar. Bu erişim, NodeJS'in bilgisayarın depolama birimlerinden dosyaları okumasına, oluşturmasına ve değiştirmesine olanak tanır. Tarayıcıda çalışan Javascript ile bu mümkün değildir.
+
+## Neden Node JS Kullanılır?
+
+NodeJS, web uygulamaları geliştirmek için popüler bir tercihtir çünkü hızlı, ölçeklenebilir, öğrenmesi kolaydır ve istemci ve sunucu tarafında aynı dili (Javascript) kullanmamıza olanak tanır. Ayrıca NodeJS, büyük bir geliştirici topluluğuna ve web uygulamaları geliştirmek için kullanılabilecek çok sayıda açık kaynaklı kütüphaneye sahiptir.
+
+NodeJS'in kullanımı web uygulamaları ile sınırlı değildir. Şu tür uygulamalar geliştirmek için de kullanılabilir:
+- **Masaüstü uygulamaları**
+- **Mobil uygulamalar**
+- **IoT (Nesnelerin İnterneti)** uygulamaları.
+
+## Node JS Nasıl Kurulur?
+
+NodeJS'i kurmak için [resmi NodeJS web sitesinden](https://nodejs.org/en/download) NodeJS yükleyicisini indirmeniz gerekir. Yükleyici, NodeJS ve **NPM** (*Node Package Manager*) araçlarını bilgisayarınıza kuracaktır. **NPM**, NodeJS paketlerini yüklemek ve yönetmek için kullanılan bir araçtır.
+
+## Node JS Nasıl Çalıştırılır?
+
+Node JS'i çalıştırmak için bir terminal açmamız ve çalıştırmak istediğimiz dosyanın adının önüne `node` yazarak çalıştırmamız gerekir. Örneğin, `index.js` adında bir dosyamız varsa, bu dosyayı `node index.js` yazarak terminalde çalıştırabiliriz.
+
+Bu yöntemle yalnızca terminalimizde açık olan klasörün içindeki dosyaları çalıştırabiliriz. Başka bir yerdeki dosyaları çalıştırmak istiyorsak, terminalde ilgili klasöre gitmemiz gerekir.
+
+![Node Çalıştırma](RunningNode.gif)
+

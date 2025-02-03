@@ -210,9 +210,212 @@ Remember, different platforms or flavors of Markdown might have additional featu
 
 Read more from [Markdown Guide](https://www.markdownguide.org/).
 
-## Excercises
+# Markdown
 
-- Create `README.md` file into your repository and write a short introduction about yourself using Markdown syntax.
-- Make sure to use at least 3 different Markdown syntaxes (e.g. headings, lists, links, images, etc.).
-- Commit and push your changes to your repository.
-- Check your repository on GitHub and make sure that your `README.md` file is rendered properly.
+- [Markdown](#markdown)
+  - [Öğrenme Çıktıları](#öğrenme-çıktıları)
+  - [Markdown Nedir?](#markdown-nedir)
+  - [Biçimleme Dili Nedir?](#biçimleme-dili-nedir)
+  - [Markdown'un Avantajları:](#markdownun-avantajları)
+  - [Markdown'un Dezavantajları:](#markdownun-dezavantajları)
+  - [Markdown Ne Zaman Kullanılır?](#markdown-ne-zaman-kullanılır)
+  - [Markdown Temel Sözdizimi:](#markdown-temel-sözdizimi)
+    - [Başlıklar:](#başlıklar)
+    - [Vurgu:](#vurgu)
+    - [Listeler:](#listeler)
+      - [Sırasız:](#sırasız)
+      - [Sıralı:](#sıralı)
+    - [Bağlantılar:](#bağlantılar)
+    - [Resimler:](#resimler)
+    - [Alıntılar:](#alıntılar)
+    - [Satır İçi Kod:](#satır-ici-kod)
+    - [Kod Blokları:](#kod-blokları)
+    - [Yatay Çizgi:](#yatay-çizgi)
+    - [Tablolar:](#tablolar)
+    - [Görev Listeleri:](#görev-listeleri)
+  - [Alıştırmalar](#alıştırmalar)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+
+- Markdown'un ne olduğunu ve neden faydalı olduğunu açıklayabilirsiniz;
+- Markdown'un avantajlarını ve dezavantajlarını tanımlayabilirsiniz;
+- Markdown ile metin biçimlendirebilirsiniz;
+- Markdown'u dökümantasyon, blog yazımı ve diğer amaçlar için kullanabilirsiniz;
+- Markdown'u GitHub üzerinde kullanabilirsiniz.
+
+## Markdown Nedir?
+
+Markdown, basit bir metin biçimlendirme sözdizimine sahip hafif bir biçimleme dilidir. 2004 yılında John Gruber tarafından geliştirilmiştir. Markdown'un temel amacı, insanların HTML (veya diğer çıktı formatlarına) dönüştürülebilecek bir şekilde metin yazmalarını ve biçimlendirmelerini kolaylaştırmaktır.
+
+## Biçimleme Dili Nedir?
+
+Bir biçimleme dili, metni biçimlendirmek veya yapılandırmak için kullanılan bir dildir. Bu diller, metne eklenen işaretler veya etiketlerle, belirli metinlerin nasıl biçimlendirilmesi veya yapılandırılması gerektiğini tanımlar. Biçimleme dilleri dökümantasyon, web sayfası oluşturma, blog yazımı ve daha birçok bağlamda yaygın olarak kullanılır.
+
+Yaygın biçimleme dilleri şunlardır:
+
+- HTML
+- XML
+- LaTeX
+- Markdown
+- vb.
+
+## Markdown'un Avantajları:
+
+- **Basitlik:** Markdown öğrenmesi ve kullanması kolaydır. Sözdizimi sezgiseldir ve teknik olmayan kişiler bile kolaylıkla bu formatta yazmaya başlayabilir.
+- **Okunabilirlik:** Markdown belgeleri düz metin içerdiğinden, başka bir formata dönüştürülmeden bile okunabilir.
+- **Taşınabilirlik:** Bu dosyalar düz metin olduğundan, Markdown belgeleri işletim sistemi bağımsızdır ve herhangi bir metin editörüyle açılabilir.
+- **Esnek Çıkış:** Markdown, HTML, PDF ve hatta MS Word veya LaTeX formatı gibi çeşitli formatlara dönüştürülebilir.
+- **Yaygın Kullanım:** GitHub, Reddit, Stack Exchange ve hatta Slack, Discord gibi mesajlaşma uygulamaları Markdown'u destekler.
+- **Versiyon Kontrol Uyumlu:** Düz metin olduğundan, Markdown versiyon kontrol sistemleriyle (örneğin Git) sorunsuz çalışır.
+- **Özel Yazılım Gerekmez:** Markdown herhangi bir metin editöründe yazılabilir.
+
+## Markdown'un Dezavantajları:
+
+- **Sınırlı Stil Seçenekleri:** Markdown temel biçimlendirmeleri kolayca yaparken, karmaşık stiller veya düzen gerektiren belgeler için uygun değildir.
+- **Tutarsızlıklar:** Markdown'un birkaç varyasyonu vardır ve tüm araçlar her özelliği desteklemez.
+- **Büyük Belgeler İçin İdeal Değil:** Markdown büyük belgeler için kullanılabilir, ancak daha yönetilebilir ve yapısal formatlar kadar uygun olmayabilir.
+- **Yerleşik Önizleme Yok:** Özel bir Markdown editörü kullanmadan, formatlanmış çıktıyı dönüştürmeden önizlemek mümkün değildir.
+
+## Markdown Ne Zaman Kullanılır?
+
+- **Dökümantasyon:** Markdown, README dosyaları ve dökümantasyon için sıklıkla kullanılır.
+- **Blog Yazımı:** Markdown birçok blog platformu tarafından desteklenir.
+- **Not Tutma:** Markdown yapılandırılmış notlar almak için harikadır.
+- **Çevrimiçi Tartışmalar:** Reddit ve Stack Exchange gibi platformlar Markdown'u kullanır.
+- **Kitap Yazımı:** Markdown kitap yazmak için de kullanılabilir.
+- **Sunumlar:** Markdown ile Reveal.js gibi araçları kullanarak sunum oluşturabilirsiniz.
+- **Eğitim Materyalleri:** Markdown eğitim materyalleri oluşturmak için uygundur.
+
+## Markdown Temel Sözdizimi:
+
+### Başlıklar:
+
+```
+markdown
+
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+### Vurgu:
+
+```markdown
+*italic* or _italic_
+**bold** or __bold__
+**_italic and bold_** or *__italic and bold__*
+~~strikethrough~~
+```
+
+### Listeler:
+
+#### Sırasız:
+
+```markdown
+* Item 1
+* Item 2
+  * Subitem 2.1
+  * Subitem 2.2
+```
+
+or 
+
+```markdown
+- Item 1
+- Item 2
+  - Subitem 2.1
+  - Subitem 2.2
+```
+
+#### Sıralı:
+
+```markdown
+1. First item
+2. Second item
+   1. Subitem 2.1
+   2. Subitem 2.2
+```
+
+### Bağlantılar:
+
+```markdown
+[Google](https://www.google.com)
+```
+
+### Görseller:
+
+```markdown
+![Alt text](url_to_image)
+```
+
+### Blok alıntı:
+
+```markdown
+> This is a blockquote.
+```
+
+### Hiza Kodu:
+
+```markdown
+Here is `inline code`.
+```
+
+### Kod Bloğu:
+
+Using three backticks:
+
+<pre>
+```
+function example() {
+  console.log("example");
+}
+```
+</pre>
+
+Or with syntax highlighting:
+
+<pre>
+```javascript
+function example() {
+  console.log("example");
+}
+```
+</pre>
+
+### Horizontal Rule:
+
+```markdown
+---
+```
+
+or 
+
+```markdown
+***
+```
+
+### Tables:
+
+```markdown
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Cell1    | Cell2    |
+| Cell3    | Cell4    |
+```
+
+### Task Lists:
+
+```markdown
+- [x] Task 1 (completed)
+- [ ] Task 2 (not completed)
+```
+
+Unutmayın, farklı platformlar veya Markdown'un farklı sürümleri ek özelliklere veya küçük varyasyonlara sahip olabilir, ancak yukarıda belirtilenler temel ve yaygın olarak kullanılan sözdizimini kapsar.
+
+Daha fazla okumak için [Markdown Guide](https://www.markdownguide.org/).
+
+

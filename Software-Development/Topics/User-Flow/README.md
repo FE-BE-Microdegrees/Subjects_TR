@@ -6,3 +6,12 @@ In this topic we'll cover the concept of user flow - what it is, why it's import
 
 
 ## Exercises
+
+
+# Kullanıcı Akışı
+
+Bu konumuzda kullanıcı akışının ne olduğunu, neden önemli olduğunu ve nasıl yapılacağını ele alacağız.
+
+## Öğrenme Çıktıları
+
+## Alıştırmalar

@@ -53,3 +53,59 @@ We have to understand, that during this course we will not be able to cover all 
 - [User Journey](../User-Journey/README.md)
 - [User Flow](../User-Flow/README.md)
 - [User Testing](../User-Testing/README.md)
+
+# Kullanıcı Araştırması
+
+Bu konu başlığında, kullanıcı araştırmasının ne olduğunu, neden önemli olduğunu ve nasıl yapılacağını keşfedeceğiz.
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+
+- Kullanıcı araştırmasının ne olduğunu anlayabileceksiniz;
+- Farklı kullanıcı araştırması türlerini tanımlayabileceksiniz;
+- Kullanıcı araştırmasının önemini açıklayabileceksiniz.
+
+## Kullanıcı Araştırması Nedir?
+
+Hepimizin kendi deneyimleri, görüşleri ve önyargıları vardır. Yazılım geliştirirken, bunun kendimiz için değil, kullanıcılarımız için olduğunu unutmamalıyız. Kullanıcılarımızın ne istediğini ve neye ihtiyaç duyduğunu bilmenin tek yolu onlara sormaktır. İşte burada kullanıcı araştırması devreye girer.
+
+**Unutmayın ki, başkaları için yazılım geliştiremezsiniz, ancak onların ihtiyaçlarını ve isteklerini anlamadan.**
+
+Kullanıcı araştırması, kullanıcılarınızın ihtiyaçlarını, isteklerini ve davranışlarını anlamak sürecidir. Yazılım geliştirme sürecinin kritik bir parçasıdır ve bunu erken ve sık bir şekilde yapmak önemlidir.
+
+Kullanıcı araştırması yapmanın en kolay yolu, kullanıcılarınızla konuşmaktır. Onlara ne istediklerini, neye ihtiyaç duyduklarını ve yazılımınızı nasıl kullandıklarını sorabilirsiniz. Ayrıca onları yazılımınızı kullanırken gözlemleyebilir ve ne yaptıklarını ve bunu nasıl yaptıklarını görebilirsiniz.
+
+Kısacası, kullanıcı araştırması, kullanıcılarınızı anlamak ve bu anlayışı daha iyi yazılımlar geliştirmek için kullanma sürecidir.
+
+Bunu yapmak için şunları yapabiliriz:
+
+- Kullanıcı Görüşmeleri
+- Anketler ve Soru Formları
+- Gözlemler
+- ...
+
+Yazılım geliştirmeye başlamadan önce, kullanıcılarımızı ve yazılımımızdan ne beklediklerini anlamak için şu tekniklerden bazılarını kullanabiliriz:
+
+- Kullanıcı Hikayeleri
+- Kullanıcı Persona Gelişimi
+- Kullanıcı Yolculuğu Haritalaması
+- Kullanıcı Akış Haritalaması
+- Kullanıcı Testleri
+- ...
+
+Bu kurs sırasında, bu konuları derinlemesine inceleyemeyeceğimizi anlamamız gerekiyor. Bu konuları yüzeysel bir şekilde ele alacağız, ancak bu konuların ne olduğunu ve yazılım geliştirmede nasıl kullanılabileceğini anlamanızı sağlamaya çalışacağız.
+
+## Egzersizler
+
+- Kullanıcı araştırması kavramını açıklayın.
+- Farklı kullanıcı araştırması türlerini açıklayın.
+- Kullanıcı araştırmasının önemini açıklayın.
+
+## Sonraki Adımlar
+
+- [Kullanıcı Hikayeleri](../User-Stories/README.md)
+- [Persona](../Persona/README.md)
+- [Kullanıcı Yolculuğu](../User-Journey/README.md)
+- [Kullanıcı Akışı](../User-Flow/README.md)
+- [Kullanıcı Testi](../User-Testing/README.md)

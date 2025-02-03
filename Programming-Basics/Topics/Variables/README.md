@@ -114,3 +114,96 @@ console.log(firstName + ' ' + lastName); // print out values of the firstName an
 In the same file, declare a variable named `age` and assign the value `25` to it.
 
 Print out text `John is 25 years old.` using the `firstName` and `age` variables.
+# Değişkenler
+
+Bu konuda, JavaScript'teki değişkenler hakkında öğreniyoruz.
+
+- [Değişkenler](#değişkenler)
+  - [Öğrenme Hedefleri](#öğrenme-hedefleri)
+  - [Değişken Nedir?](#değişken-nedir)
+  - [Değişken Nasıl Deklare Edilir?](#değişken-nasıl-deklare-edilir)
+  - [Değişkenlere Değer Atama](#değişkenlere-değer-atama)
+  - [Alıştırmalar](#alıştırmalar)
+    - [Alıştırma 1](#alıştırma-1)
+    - [Alıştırma 2](#alıştırma-2)
+    - [Alıştırma 3](#alıştırma-3)
+
+## Öğrenme Hedefleri
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+- Değişkenin ne olduğunu tanımlayabileceksiniz
+- Değişkenleri deklare edebileceksiniz
+- Değişkenlere değer atayabileceksiniz
+- `var`, `let` ve `const` arasındaki farkları açıklayabileceksiniz
+
+## Değişken Nedir?
+
+Değişken, bilgisayarın belleğinde adlandırılmış bir depolama alanıdır ve bu alanda veriler saklanabilir. Değişkenler, bir programın çalışması sırasında değeri değiştirilebilen verileri saklamak için kullanılır. Örneğin, `x` adında bir değişken, `5` değerini saklamak için kullanılabilir. `x` değişkeninin değeri, `10` olarak değiştirilebilir. Değişkenler, programda daha sonra kullanılmak üzere veri saklamak için kullanılır.
+
+Bir değişkeni, üzerine etiket yapıştırılmış bir kutu gibi düşünebiliriz (`değişken adı`). Bu kutu bir şeyler içerebilir (`değer`). Kutunun içine bir şey koyabiliriz (`değer atama`) ve kutudan bir şey çıkarabiliriz (`değeri kullanma`). Kutunun içinde ne olduğunu öğrenmek istiyorsak, etiketine bakarak (`değişken adı`) kutuyu tanımlarız ve sonra kutuyu açarız (`değeri erişme`).
+
+Örneğin, `elma` adında bir değişkenimiz olabilir, içinde bazı elmalar saklanır. Eğer `elma` değişkeninde kaç tane elma olduğunu öğrenmek istiyorsak, etikete bakarak (`elma`) kutuyu tanımlarız ve sonra kutuyu açarız (`değeri erişme`).
+
+JavaScript'te bu şöyle bir şey olacaktır:
+
+```javascript```
+let elma = 5; // elma adında bir değişken deklare edilir ve 5 değeri atanır (kutuda 5 elma var)
+console.log(elma); // elma değişkeninin değerini ekrana yazdırır (kutuyu açar, içinde kaç elma olduğunu görür ve ekrana yazdırır)
+Değişken Nasıl Deklare Edilir?
+Bir değişkeni bir programda kullanabilmek için önce onu deklare etmemiz gerekir. JavaScript'te, var, let veya const anahtar kelimeleriyle bir değişken deklare edebiliriz.
+
+var anahtar kelimesi, değeri değiştirilebilen bir değişkeni deklare etmek için kullanılır, ancak günümüzde var kullanmaktan kaçınılmalı ve yerine let kullanılmalıdır.
+let anahtar kelimesi, değeri değiştirilebilen bir değişkeni deklare etmek için kullanılır.
+const anahtar kelimesi, değeri değiştirilemeyecek bir değişkeni deklare etmek için kullanılır.
+
+let ilkAd; // ilkAd adında bir değişken deklare edilir
+let yas, soyad; // birden fazla değişken deklare edilir
+Önceki örnekte, ilkAd, yas ve soyad adlarında değişkenler deklare ettik. Ayrıca, aynı anda değişkenlere değer atayarak da deklare edebiliriz.
+
+Değişkenlere Değer Atama
+Değişkenlere değer atamak için atama operatörü = kullanılır. Atama operatörünün sağ tarafındaki değer, sol taraftaki değişkene atanır.
+
+let ilkAd = 'John'; // ilkAd adında bir değişken deklare edilir ve 'John' değeri atanır
+let yas = 25, soyad = 'Doe'; // birden fazla değişken deklare edilir ve değerler atanır
+const PI = 3.14; // PI adında bir sabit deklare edilir ve 3.14 değeri atanır
+Alıştırmalar
+Aşağıdaki alıştırmalara çözümleri eklemek için index.js adında bir dosya oluşturun (veya istediğiniz başka bir isim verebilirsiniz).
+
+Kodunuzu, node index.js komutuyla çalıştırarak test edin.
+
+Değişkenler için farklı değerler kullanarak kodunuzu da test edebilirsiniz.
+
+### Alıştırma 1
+ilkAd adında bir değişken deklare edin ve ona John değerini atayın.
+
+ilkAd değişkeninin değerini ekrana yazdırın.
+
+Kodunuzu node index.js komutuyla test edin.
+
+<details> <summary>Çözüm</summary>
+let ilkAd = 'John'; // ilkAd adında bir değişken deklare edilir ve 'John' değeri atanır
+
+console.log(ilkAd); // ilkAd değişkeninin değerini ekrana yazdırır
+</details>
+
+### Alıştırma 2
+Aynı dosyada, soyad adında bir değişken deklare edin ve ona Doe değerini atayın.
+
+ilkAd ve soyad değişkenlerinin değerlerini tek bir satırda yazdırın. Çıktı şu şekilde olmalıdır: John Doe.
+
+Kodunuzu node index.js komutuyla test edin.
+
+İpucu: ilkAd ve soyad değişkenlerinin değerlerini birleştirmek için + operatörünü kullanın.
+
+<details> <summary>Çözüm</summary>
+let ilkAd = 'John'; // ilkAd adında bir değişken deklare edilir ve 'John' değeri atanır
+let soyad = 'Doe'; // soyad adında bir değişken deklare edilir ve 'Doe' değeri atanır
+
+console.log(ilkAd + ' ' + soyad); // ilkAd ve soyad değişkenlerinin değerlerini tek bir satırda yazdırır
+</details>
+
+### Alıştırma 3
+Aynı dosyada, yas adında bir değişken deklare edin ve ona 25 değerini atayın.
+
+John is 25 years old. metnini, ilkAd ve yas değişkenlerini kullanarak yazdırın.
+

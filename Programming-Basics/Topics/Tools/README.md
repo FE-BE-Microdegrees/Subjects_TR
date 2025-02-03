@@ -71,3 +71,92 @@ As mentioned above, we can use Git from the command line or from a GUI. During t
 There will be a separate topic on Git and GitHub later in this course, where we'll learn how to use Git and GitHub to track changes in our projects and to collaborate with other developers.
 
 Also there will be more tools that we'll be using during this course, but we'll learn about them as we go along.
+
+# Araçlar  
+
+Bu bölümde, bu kurs boyunca kullanacağımız araçları öğreneceğiz.  
+
+- [Araçlar](#araçlar)  
+  - [Öğrenme Çıktıları](#öğrenme-çıktıları)  
+  - [Kod Düzenleyici](#kod-düzenleyici)  
+  - [Tarayıcı](#tarayıcı)  
+  - [Terminal](#terminal)  
+  - [Git](#git)  
+  - [GitHub](#github)  
+  - [GitHub Desktop](#github-desktop)  
+
+## Öğrenme Çıktıları  
+
+Bu konuyu tamamladıktan sonra:  
+- Kod düzenleyicisinin ne olduğunu açıklayabileceksiniz.  
+- Tarayıcının ne olduğunu açıklayabileceksiniz.  
+- Terminalin ne olduğunu açıklayabileceksiniz.  
+- Git'in ne olduğunu açıklayabileceksiniz.  
+- GitHub'ın ne olduğunu açıklayabileceksiniz.  
+- GitHub Desktop'ın ne olduğunu açıklayabileceksiniz.  
+
+## Kod Düzenleyici  
+
+Kod düzenleyici, kaynak kod yazmak ve düzenlemek için kullanılan bir programdır. Birçok farklı kod düzenleyici mevcuttur, ancak en popüler olanlar:  
+- Visual Studio Code  
+- Sublime Text  
+- Atom  
+- vb.  
+
+Teknik olarak, sıradan bir metin düzenleyici kullanarak da kod yazabiliriz. Ancak kod düzenleyiciler, kod yazmayı kolaylaştıran birçok özelliğe sahiptir. Örneğin:  
+- Sözdizimi vurgulama  
+- Kod tamamlama  
+- Kod katlama  
+
+Bu kurs boyunca, kod düzenleyici olarak [Visual Studio Code](https://code.visualstudio.com/) kullanacağız. Ancak herkes istediği kod düzenleyiciyi tercih edebilir. Visual Studio Code, Microsoft tarafından geliştirilen ücretsiz ve açık kaynaklı bir kod düzenleyicidir. Windows, Mac ve Linux için kullanılabilir ve özellikle yeni başlayanlar için harika bir tercihtir.  
+
+## Tarayıcı  
+
+Tarayıcı, web sayfalarını görüntülemek için kullanılan bir programdır. Birçok farklı tarayıcı mevcuttur, ancak en popüler olanlar:  
+- Google Chrome  
+- Mozilla Firefox  
+- Microsoft Edge  
+
+Bu kurs boyunca, tarayıcı olarak [Google Chrome](https://www.google.com/chrome/) kullanacağız. Ancak yine, herkes istediği tarayıcıyı kullanabilir.  
+
+## Terminal  
+
+Terminal, işletim sistemi ile etkileşim kurmak için kullanılan bir programdır. Aynı zamanda komut satırı arayüzü (CLI) veya kabuk (shell) olarak da bilinir. En popüler terminallerden bazıları:  
+- Windows Terminal  
+- iTerm2  
+- Hyper  
+- vb.  
+
+Bu kurs boyunca, Visual Studio Code’un yerleşik terminalini kullanacağız. Ancak herkes istediği terminali tercih edebilir. Terminalleri, dosya oluşturma, paket yükleme ve program çalıştırma gibi çeşitli görevleri gerçekleştirmek için komutlar çalıştırmak amacıyla kullanacağız.  
+![Node Çalıştırma](../NodeJS/RunningNode.gif)  
+
+## Git  
+
+[Git](https://git-scm.com/), dosya ve klasörlerdeki değişiklikleri izlemek için kullanılan bir sürüm kontrol sistemidir. Git, dağıtılmış bir sürüm kontrol sistemidir; yani her geliştirici, projenin tüm kopyasını kendi bilgisayarında tutar.  
+
+Git’i komut satırından veya bir GUI (grafiksel kullanıcı arayüzü) ile kullanabiliriz. Bu kurs boyunca, projelerimizdeki değişiklikleri takip etmek ve diğer geliştiricilerle iş birliği yapmak için Git kullanacağız.  
+
+## GitHub  
+
+[GitHub](https://www.github.com), Git depoları için web tabanlı bir barındırma hizmetidir.  
+
+- Geliştiricilerin projelerde iş birliği yapmasına ve kodlarını birbirleriyle paylaşmasına olanak tanır.  
+- Aynı zamanda bir sosyal ağdır: Geliştiriciler birbirlerini takip edebilir, projelerini beğenebilir ve yorum yapabilirler.  
+
+Bu kurs boyunca, projelerimizi barındırmak ve diğer geliştiricilerle iş birliği yapmak için GitHub kullanacağız.  
+
+## GitHub Desktop  
+
+Daha önce belirttiğimiz gibi, Git’i komut satırından veya bir GUI ile kullanabiliriz. Bu kurs boyunca, Git GUI olarak [GitHub Desktop](https://desktop.github.com/) kullanacağız. Ancak herkes istediği Git GUI'yi tercih edebilir.  
+
+- GitHub Desktop, GitHub tarafından geliştirilen ücretsiz ve açık kaynaklı bir Git GUI’dir.  
+- Windows ve Mac için kullanılabilir.  
+- Özellikle yeni başlayanlar için harika bir tercihtir.  
+
+![Github Desktop](GithubDesktop.png)  
+
+## Daha Fazlası  
+
+Kursun ilerleyen bölümlerinde Git ve GitHub hakkında ayrı bir konu olacak. Bu konuda, Git ve GitHub'ı projelerimizdeki değişiklikleri takip etmek ve diğer geliştiricilerle iş birliği yapmak için nasıl kullanacağımızı öğreneceğiz.  
+
+Ayrıca, bu kurs boyunca kullanacağımız başka araçlar da olacak. Ancak bu araçlar hakkında, konular ilerledikçe bilgi vereceğiz.  

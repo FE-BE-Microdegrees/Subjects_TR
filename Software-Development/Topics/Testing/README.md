@@ -95,3 +95,100 @@ In conclusion, testing is an integral part of software development that ensures 
 
 ## Excercises and Assignments
 
+# Yazılım Geliştirmede Test Etme
+
+- [Yazılım Geliştirmede Test Etme](#yazılım-geliştirmede-test-etme)
+  - [Öğrenme Çıktıları](#öğrenme-çıktıları)
+  - [Test Etmenin Önemi](#test-etmenin-önemi)
+  - [Test Türleri](#test-türleri)
+  - [Test Yaklaşımları](#test-yaklaşımları)
+  - [Test Yöntemleri](#test-yöntemleri)
+  - [Yazılım Geliştirme Yaşam Döngüsü (SDLC) ve Test Etme](#yazılım-geliştirme-yaşam-döngüsü-sdlc-ve-test-etme)
+  - [Popüler Test Araçları](#popüler-test-araçları)
+  - [Alıştırmalar ve Ödevler](#alıştırmalar-ve-ödevler)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+
+- Yazılım geliştirmede test etmenin önemini anlayabilirsiniz;
+- Farklı test türlerini tanımlayabilirsiniz;
+- Çeşitli test yaklaşımlarını ve yöntemlerini açıklayabilirsiniz;
+- Yazılım geliştirmeye test prensiplerini uygulayabilirsiniz.
+
+Yazılım geliştirmede test etme, bir program veya uygulamayı yazılım hatalarını bulmak amacıyla çalıştırma sürecidir. Yazılımın, belirtilen gereksinimlere uyduğunu ve son kullanıcıya kaliteli bir ürün sunduğunu garanti eder.
+
+## Test Etmenin Önemi
+
+- **Kalite Güvencesi:** Ürünün, istenen kalite standartlarına uyduğunu ve hatalardan arındırıldığını garanti eder.
+- **Maliyet Etkinliği:** Geliştirme yaşam döngüsünün erken aşamalarında sorunları tespit etmek ve düzeltmek, uzun vadede tasarruf sağlar.
+- **Güvenlik:** Yazılımda bulunan zayıf noktaları ve güvenlik açıklarını tespit eder.
+- **Kullanıcı Memnuniyeti:** Ürünün kullanıcı gereksinimlerine uyduğundan ve verimli bir şekilde kullanılabildiğinden emin olur.
+- **Güvenilirlik ve Performans:** Yazılımın yük altında optimal performans gösterdiğinden ve çeşitli koşullarda güvenilir olduğundan emin olur.
+
+## Test Türleri
+
+- **Birim Testi:** Yazılımın bireysel birimlerinin veya bileşenlerinin test edilmesi.
+
+- **Entegrasyon Testi:** Birleşik birimler arasındaki etkileşimlerin çıktıları üretmek için test edilmesi.
+
+- **Fonksiyonel Test:** Yazılımın, belirtilen gereksinimlere uygun şekilde davrandığını test etme.
+
+- **Sistem Testi:** Yazılımın bir sistem olarak test edilmesi ve beklendiği gibi çalıştığının doğrulanması.
+
+- **Uçtan Uca Test:** Bir uygulamanın akışının test edilmesi, kullanıcı girdisi ve çıktılarının düzgün çalıştığından emin olmak.
+
+- **Regresyon Testi:** Yeni kod değişikliklerinin mevcut işlevsellikleri olumsuz etkilemediğini doğrulamak.
+
+- **Kabul Testi:** Yazılımın, müşteri tesliminden önce kabul kriterlerini karşıladığını doğrulamak.
+
+- **Performans Testi:** Yazılımın performansının, hızının ve yanıt verebilirliğinin değerlendirilmesi. Alt türleri arasında Yük Testi, Stres Testi ve Hacim Testi bulunur.
+
+- **Kullanılabilirlik Testi:** Yazılımın son kullanıcı bakış açısından değerlendirilmesi, kullanıcı dostu olup olmadığının kontrol edilmesi.
+
+- **Güvenlik Testi:** Yazılım uygulamalarındaki zayıflıkları, tehditleri ve riskleri tespit etme.
+
+- **Uyumluluk Testi:** Yazılımın farklı cihazlar, tarayıcılar ve işletim sistemleriyle uyumlu olup olmadığını kontrol etme.
+
+- **Keşif Testi:** Yapısal olmayan bir yaklaşım olup, test uzmanlarının aktif olarak uygulamayı keşfederek hataları bulması.
+
+## Test Yaklaşımları
+
+- **Manuel Test:** Test uzmanları, herhangi bir araç desteği olmadan test senaryolarını manuel olarak uygular. Bu, kullanıcıların dikkatli gözlem yapmasını gerektirir.
+
+- **Otomatik Test:** Test senaryoları, araçlar, betikler ve yazılımlar yardımıyla otomatik olarak uygulanır. Bu yaklaşım, regresyon testi, yük testi ve tekrarlanan görevler için faydalıdır.
+
+## Test Yöntemleri
+
+- **Beyaz Kutu Testi (ya da Cam Kutu Testi):** Yazılımın iç kodu, tasarımı ve yapısı temel alınarak yapılan test. Bu test, kod hakkında bilgi gerektirir.
+
+- **Siyah Kutu Testi:** Yazılım gereksinimleri ve fonksiyonalitesine dayalı olarak yapılan test. İç işleyişi hakkında bilgi gerektirmez.
+
+- **Gri Kutu Testi:** Hem Beyaz Kutu hem de Siyah Kutu Testlerinin birleşimi.
+
+## Yazılım Geliştirme Yaşam Döngüsü (SDLC) ve Test Etme
+
+- **Şelale Modeli:** Test etme yalnızca geliştirme tamamlandıktan sonra başlar.
+
+- **Çevik Modeli:** Test etme geliştirme ile paralel olarak gerçekleşir ve yinelemeli bir süreçtir.
+
+- **V-Modeli (Doğrulama ve Doğrulama):** Geliştirme ve test etme paralel olarak gerçekleşir, her geliştirme aşamasının karşılık gelen bir test aşaması vardır.
+
+## Popüler Test Araçları
+
+- **JUnit:** Java için yaygın olarak kullanılan bir test aracıdır.
+
+- **Selenium:** Bir web tarayıcısını programlar aracılığıyla kontrol etmek için güçlü bir araçtır.
+
+- **QTP (Quick Test Professional):** Otomatik fonksiyonel test aracı.
+
+- **LoadRunner:** Performans testi aracı.
+
+- **TestNG:** JUnit’ten ilham alarak test yapılandırması ve paralel yürütme için tasarlanmıştır.
+
+- **NUnit:** .NET dillerine yönelik birim testi çerçevesi.
+
+Sonuç olarak, test etme yazılım geliştirmede, sağlam ve kaliteli bir ürün teslim edilmesini garanti eden kritik bir süreçtir. Yazılımın hatalarını, zayıf noktalarını ve eksikliklerini erken aşamalarda tespit ederek yazılımın kullanıcı beklentilerini ve endüstri standartlarını karşıladığını garantiler. Doğru test etme, güvenilir yazılım sağlar, riskleri azaltır ve kullanıcı memnuniyetini artırır.
+
+## Alıştırmalar ve Ödevler
+

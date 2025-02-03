@@ -100,3 +100,111 @@ Software development is a complex process that requires a lot of planning and co
 - Describe with Your own words what is software.
 - Describe with Your own words what is software development.
 - Discuss about open source and proprietary software.
+
+
+# Yazılım ve Yazılım Geliştirme
+
+Bu konuda, yazılım ve yazılım geliştirme kavramlarını keşfedeceğiz.
+
+- [Yazılım ve Yazılım Geliştirme](#yaz%C4%B1l%C4%B1m-ve-yaz%C4%B1l%C4%B1m-geli%C5%9Ftirme)
+  - [Öğrenme Çıktıları](#%C3%B6%C4%9Frenme-%C3%A7%C4%B1kt%C4%B1lar%C4%B1)
+  - [Yazılım Nedir?](#yaz%C4%B1l%C4%B1m-nedir)
+  - [Açık Kaynak Kodlu Yazılım ve Tescilli Yazılım](#a%C3%A7%C4%B1k-kaynak-kodlu-yaz%C4%B1l%C4%B1m-ve-tescilli-yaz%C4%B1l%C4%B1m)
+  - [Yazılım Nereden Gelir?](#yaz%C4%B1l%C4%B1m-nereden-gelir)
+  - [Yazılım Geliştirme Nedir?](#yaz%C4%B1l%C4%B1m-geli%C5%9Ftirme-nedir)
+  - [Egzersizler](#egzersizler)
+
+## Öğrenme Çıktıları
+
+Bu konunun sonunda şunları yapabileceksiniz:
+
+- Yazılımın ne olduğunu tanımlayın.
+- Farklı yazılım türlerini açıklayın.
+- Açık kaynak kodlu ve tescilli yazılımların farklılıklarını açıklayın.
+- Yazılım geliştirme sürecini açıklayın.
+
+## Yazılım Nedir?
+
+Yazılım Geliştirme'ye başlamak için, yazılımın ne olduğunu anlamamız gerekir. Yazılım, bir bilgisayara ne yapması gerektiğini söyleyen talimatlar dizisidir. Bu bir program, uygulama veya sistem olabilir. Yazılım, bilgisayarları kullanılabilir hale getiren şeydir. Yazılım olmadan bilgisayarlar, sadece pahalı kağıt ağırlıklarından farklı olmazdı.
+
+Yazılımı iki ana kategoriye ayırabiliriz:
+
+- **Sistem Yazılımı:** Sistem yazılımı, bir bilgisayar sisteminin donanım bileşenlerini yöneten ve kontrol eden yazılımı ifade eder. İşletim sistemlerini, aygıt sürücülerini, araçları ve diğer yönetim yazılımlarını içerir. Sistem yazılımı, bilgisayarın doğru çalışması için gereklidir. Sistem yazılımına örnekler:
+  - **Windows**
+  - **macOS**
+  - **Linux**
+  - **Android**
+  - **iOS**
+
+- **Uygulama Yazılımı:** Uygulama yazılımı, belirli bir görev veya görevler dizisini yerine getiren yazılımdır. Kelime işlemciler, elektronik tablolar, web tarayıcılar ve oyunlar gibi programları içerir. Uygulama yazılımı, çoğu kişinin "yazılım" dendiğinde düşünülen şeydir. Uygulama yazılımına örnekler:
+  - **Microsoft Word**
+  - **Google Chrome**
+  - **Adobe Photoshop**
+  - **Minecraft**
+
+Ayrıca, çeşitli web uygulamaları, mobil uygulamalar ve belirli görevler için oluşturulmuş diğer yazılım çözümleri de uygulama yazılımı olarak kabul edilebilir.
+
+## Açık Kaynak Kodlu Yazılım ve Tescilli Yazılım
+
+Yazılım ayrıca açık kaynak kodlu veya tescilli olarak sınıflandırılabilir. Açık kaynak kodlu yazılım, herkese açık olan, değiştirilebilen ve yeniden dağıtılabilecek yazılımdır. Tescilli yazılım ise bir şirket veya kişiye ait olan ve izinsiz değiştirilemeyen veya dağıtılamayan yazılımdır.
+
+Açık kaynak kodlu yazılıma örnekler:
+- **Linux**
+- **Firefox**
+- **WordPress**
+
+Tescilli yazılıma örnekler:
+- **Microsoft Windows**
+- **Adobe Photoshop**
+- **Apple iOS**
+
+|                         | Açık Kaynak Kodlu Yazılım                                            | Tescilli Yazılım |
+|-------------------------|-----------------------------------------------------------------|----------------------|
+| Erişilebilirlik         | Herkese açıktır, kaynak kodu görüntüleme, değiştirme ve dağıtma özgürlüğü sunar | Sadece lisans veya izin ile erişilebilir |
+| Lisanslama              | Genellikle açık kaynak lisanslarıyla lisanslanır ve belirli koşullar altında kullanım, değiştirme ve dağıtımına izin verir | Genellikle kullanım, değiştirme ve dağıtımı sınırlayan tescilli lisanslarla lisanslanır |
+| Geliştirme             | Genellikle geliştiriciler topluluğu tarafından işbirliği ile geliştirilir | Genellikle tek bir şirket veya geliştirici grubu tarafından geliştirilir |
+| Maliyet                 | Genellikle üretsizdir, ancak bazı şirketler/dış geliştiriciler destek veya ek hizmetler için ücret alabilir | Genellikle bir lisans ücreti veya satın alma maliyeti gerektirir |
+| Destek                  | Genellikle geliştiriciler topluluğuna dayanır, ancak bazı şirketler/dış geliştiriciler ücretli destek hizmeti de sunabilir | Genellikle şirket tarafından üretsiz veya ücretli olarak sağlanır |
+| Özelleştirme           | Kullanıcıların ihtiyaçlarına göre kaynak kodunu değiştirerek daha fazla esneklik sunar | Sınırlı özelleştirme seçenekleri sunar |
+
+Sonuç olarak, açık kaynak ve tescilli yazılımların kendi avantajları ve dezavantajları vardır. Açık kaynak yazılımlar genellikle ücretsizdir ve özelleştirme konusunda daha fazla esneklik sunar, ancak tescilli yazılımlar kadar güvenilir veya güvenli olmayabilir. Tescilli yazılımlar genellikle daha güvenilir ve güvenlidir, ancak açık kaynak yazılımlar kadar esnek veya özelleştirilebilir olmayabilir.
+
+## Yazılım Nereden Gelir?
+
+Yazılım, yazılım geliştiricileri tarafından oluşturulur. Yazılım geliştiriciler, yazılım oluşturmak için kod yazan kişilerdir. Ayrıca programcılar veya kodlayıcılar olarak da bilinirler. Yazılım geliştiriciler, kod yazmak için programlama dillerini kullanırlar. Programlama dilleri, makine koduna (örneğin ikili koda) çevrilebilen ve bir bilgisayar tarafından çalıştırılabilen formal dillerdir.
+
+Birçok farklı programlama dili vardır ve her birinin kendine özgü güçlü ve zayıf yönleri vardır. Bazıları öğrenmesi daha kolay kabul edilirken, bazıları daha güçlü ve esnektir. En popüler programlama dillerinden bazıları şunlardır:
+- [**JavaScript**](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [**Python**](https://www.python.org/)
+- [**C#**](https://dotnet.microsoft.com/en-us/languages/csharp)
+- [**Java**](https://www.w3schools.com/java/java_intro.asp)
+- [**C**](https://www.w3schools.com/c/c_intro.php?external_link=true)
+- [**C++**](https://www.w3schools.com/cpp/cpp_intro.asp)
+
+Programlama dili seçiminin her zaman kişisel tercih meselesi olmadığını belirtmek önemlidir. Bazı programlama dilleri belirli görevler için daha uygundur. Örneğin, JavaScript web geliştirme için popüler bir programlama dilidir, Python ise veri bilimi ve makine öğrenimi için popüler bir dilidir. Ayrıca, yazılımın çalışacağı donanım veya işletim sistemi türüne de bağlı olabilir.
+
+## Yazılım Geliştirme Nedir?
+
+Öncelikle, yazılım geliştirmenin programlama ile eş anlamlı olmadığını belirtmek önemlidir. Yazılım geliştirme, kod yazmayı içermekle birlikte, yalnızca kod yazmaktan çok daha fazlasıdır.
+
+Yazılım geliştirme, yazılım oluşturma sürecidir. Şunları içerir:
+
+- Kullanıcı ihtiyaçlarını analiz etme;
+- Yazılım çözümleri tasarlama;
+- Kod yazma;
+- Yazılımı test etme;
+- Yazılımı dağıtma;
+- vb.
+
+Yazılım geliştirme, çok fazla planlama ve koordinasyon gerektiren karmaşık bir süreçtir. Genellikle her üyenin belirli bir rolü olduğu yazılım geliştiricilerden oluşan bir ekipte gerçekleştirilir.
+
+## Alıştırmalar
+
+- Yazılım ve yazılım geliştirme üzerine bir tartışma yapın.
+- Kendi kelimelerinizle yazılımın ne olduğunu açıklayın.
+- Kendi kelimelerinizle yazılım geliştirmenin ne olduğunu açıklayın.
+- Açık kaynak ve tescilli yazılım hakkında tartışın.
+
+
+
+

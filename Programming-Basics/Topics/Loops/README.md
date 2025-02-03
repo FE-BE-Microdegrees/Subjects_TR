@@ -304,3 +304,224 @@ Create multiplication table using nested `for` loops.
 ```
 
 > Hint: Use nested `for` loops to create the multiplication table. Nested means that one loop is inside another loop.
+If you want to solve additional exercises, you can find some here: [Additional Exercises for Loops.](./Exercises.md)
+
+# Döngüler ve İterasyon
+
+Bu konuda döngüler ve iterasyon hakkında bilgi edineceğiz.
+
+- [Döngüler ve İterasyon](#döngüler-ve-iterasyon)
+  - [Öğrenim Çıktıları](#öğrenim-çıktıları)
+  - [Döngü Nedir?](#döngü-nedir)
+  - [`for` Döngüsü](#for-döngüsü)
+  - [`while` Döngüsü](#while-döngüsü)
+  - [`do...while` Döngüsü](#dowhile-döngüsü)
+  - [`for...in` Döngüsü](#forin-döngüsü)
+  - [`for...of` Döngüsü](#forof-döngüsü)
+  - [Döngü Kontrol Deyimleri](#döngü-kontrol-deyimleri)
+    - [`continue`](#continue)
+    - [`break`](#break)
+  - [Alıştırmalar](#alıştırmalar)
+    - [Alıştırma 1](#alıştırma-1)
+    - [Alıştırma 2](#alıştırma-2)
+    - [Alıştırma 3](#alıştırma-3)
+
+## Öğrenim Çıktıları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+
+- Döngünün ne olduğunu tanımlayın.
+- Farklı döngü türlerini açıklayın.
+- Döngü kontrol deyimlerinin ne olduğunu açıklayın.
+- `continue` deyimini açıklayın.
+- `break` deyimini açıklayın.
+- Farklı döngüleri ve döngü kontrol deyimlerini kullanın.
+
+## Döngü Nedir?
+
+Döngü, bir kod bloğunu belirli bir koşul sağlanana kadar tekrarlamak için kullanılan bir programlama yapısıdır. Döngüler, bir veri koleksiyonu üzerinde yineleme yapmak veya bir kod bloğunu belirli bir sayıda tekrar etmek için kullanılır. JavaScript'te farklı türde döngüler bulunmaktadır: `for`, `while`, `do...while`, `for...in` ve `for...of`.
+
+## `for` Döngüsü
+
+`for` döngüsü bir kod bloğunu belirli bir sayıda tekrar etmek için kullanılır. `for` döngüsü üç bölümden oluşur: *başlatma*, *koşul* ve *arttırma/azaltma*. 
+
+```javascript
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+Çıktı:
+
+Kodu kopyala
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+while Döngüsü
+while döngüsü, bir koşul doğru olduğu sürece bir kod bloğunu tekrarlar.
+
+javascript
+Kodu kopyala
+let i = 0;
+
+while (i < 10) {
+  console.log(i);
+  i++;
+}
+Çıktı:
+
+Kodu kopyala
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+do...while Döngüsü
+do...while döngüsü, koşul yanlış olsa bile döngüyü en az bir kez çalıştırır.
+
+javascript
+Kodu kopyala
+let i = 0;
+
+do {
+  console.log(i);
+  i++;
+} while (i < 10);
+Çıktı:
+
+Kodu kopyala
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+for...in Döngüsü
+for...in döngüsü bir nesnenin özellikleri üzerinde yineleme yapmak için kullanılır.
+
+javascript
+Kodu kopyala
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 25,
+  isMarried: false
+};
+
+for (let key in person) {
+  console.log(key + ': ' + person[key]);
+}
+Çıktı:
+
+vbnet
+Kodu kopyala
+firstName: John
+lastName: Doe
+age: 25
+isMarried: false
+for...of Döngüsü
+for...of döngüsü, bir yineleme nesnesinin değerleri üzerinde yineleme yapmak için kullanılır.
+
+javascript
+Kodu kopyala
+const fruits = ['apple', 'banana', 'orange'];
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+Çıktı:
+
+Kodu kopyala
+apple
+banana
+orange
+Döngü Kontrol Deyimleri
+Döngü kontrol deyimleri, bir döngünün akışını kontrol etmek için kullanılır.
+
+continue
+continue deyimi, döngünün mevcut yinelemesini atlar ve bir sonraki yinelemeye geçer.
+
+javascript
+Kodu kopyala
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    continue;
+  }
+  console.log(i);
+}
+Çıktı:
+
+Kodu kopyala
+0
+1
+2
+3
+4
+6
+7
+8
+9
+break
+break deyimi, döngüyü tamamen sonlandırır.
+
+javascript
+Kodu kopyala
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    break;
+  }
+  console.log(i);
+}
+Çıktı:
+
+Kodu kopyala
+0
+1
+2
+3
+4
+Alıştırmalar
+Bir dosya (index.js gibi) oluşturun ve aşağıdaki alıştırmaları çözmeye başlayın.
+
+Alıştırma 1
+1'den 10'a kadar sayılar üzerinde yineleme yapan ve bu sayıları konsola yazdıran bir for döngüsü oluşturun.
+
+javascript
+Kodu kopyala
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+Alıştırma 2
+1'den 10'a kadar olan sayılar üzerinde yineleme yapan ve sadece çift sayıları konsola yazdıran bir for döngüsü oluşturun.
+
+javascript
+Kodu kopyala
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+Alıştırma 3
+Çarpım tablosu oluşturmak için iç içe for döngüleri kullanın.
+
+javascript
+Kodu kopyala
+for (let i = 1; i <= 10; i++) {
+  for (let j = 1; j <= 10; j++) {
+    console.log(`${i} x ${j} = ${i * j}`);
+  }
+}

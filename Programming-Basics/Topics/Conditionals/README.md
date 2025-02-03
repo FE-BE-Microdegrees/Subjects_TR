@@ -356,5 +356,163 @@ The number is odd
 - `D` for 60 to 69
 - `F` for below 60
 
+
 Print the grade classification.
+
+# Additional Exercises
+
+If you want to solve additional exercises, you can find some here: [Additional Exercises](./Exercises.md)
+
+# Koşullar (Conditionals)
+
+Bu konuda, Javascript'te koşulları (şartlı ifadeleri) öğreneceğiz.
+
+- [Koşullar](#koşullar)
+  - [Öğrenme Hedefleri](#öğrenme-hedefleri)
+  - [Koşul Nedir?](#koşul-nedir)
+  - [Koşulları Anlama](#koşulları-anlama)
+    - [Boolean (Mantıksal) İfadeler](#boolean-mantıksal-ifadeler)
+    - [Karşılaştırma Operatörleri](#karşılaştırma-operatörleri)
+  - [Koşul Çeşitleri](#koşul-çeşitleri)
+    - [if](#if)
+    - [if-else](#if-else)
+    - [if-else-if](#if-else-if)
+    - [switch](#switch)
+    - [Ternary Operator](#ternary-operator)
+  - [İç İçe Geçmiş Koşullar](#iç-içe-geçmiş-koşullar)
+  - [Doğruluk (Truthiness) ve Yanlışlık (Falsiness)](#doğruluk-truthiness-ve-yanlışlık-falsiness)
+  - [En İyi Uygulamalar](#en-iyi-uygulamalar)
+  - [Alıştırmalar](#alıştırmalar)
+    - [Alıştırma 1 - Temel If İfadesi](#alıştırma-1---temel-if-ifadesi)
+    - [Alıştırma 2 - If-Else İfadesi](#alıştırma-2---if-else-ifadesi)
+    - [Alıştırma 3 - İç İçe Geçmiş If-Else İfadesi](#alıştırma-3---iç-içe-geçmiş-if-else-ifadesi)
+
+## Öğrenme Hedefleri
+
+Bu konuyu tamamladıktan sonra:
+
+- Koşulun ne olduğunu tanımlayabileceksiniz.
+- `==` ve `===` arasındaki farkı açıklayabileceksiniz.
+- `!=` ve `!==` arasındaki farkı açıklayabileceksiniz.
+- `if`, `if-else`, `if-else-if`, `switch` ve ternary operator arasındaki farkı açıklayabileceksiniz.
+- İç içe geçmiş koşulların ne olduğunu açıklayabileceksiniz.
+- Doğruluk (truthiness) ve yanlışlığı (falsiness) açıklayabileceksiniz.
+- Koşullar yazarken en iyi uygulamaları kullanabileceksiniz.
+
+## Koşul Nedir?
+
+Koşul, farklı durumlara göre farklı işlemler yapmak için kullanılan bir ifadedir. Örneğin, bir sayının pozitif mi yoksa negatif mi olduğunu kontrol edip, kontrol sonucuna göre farklı işlemler yapabiliriz.
+
+Gündelik hayatımızda, kararlarımızı verirken koşulları sürekli kullanırız. Örneğin, spor yapıp yapmamaya karar verirken hava durumu, ruh hali, program yoğunluğu gibi etmenleri kontrol eder ve sonucuna göre kararımızı veririz.
+
+```mermaid
+flowchart TD
+    A[Spor yapmaya gidecek miyim?] --> B{Hava güneşli mi?}
+    B -- Evet --> C{Ruh hali iyi mi?}
+    B -- Hayır --> D[Spor yapmaya gitme]
+    C -- Evet --> E{Programım boş mu?}
+    C -- Hayır --> D
+    E -- Evet --> F[Spor yapmaya git]
+    E -- Hayır --> D
+```
+
+## Koşulları Anlama
+
+Koşulları anlamak için, boolean ifadeler ve karşılaştırma operatörlerini anlamalıyız.
+
+### Boolean (Mantıksal) İfadeler
+
+Boolean ifade, boolean bir değer döndüren bir ifadedir. Boolean değer ya `true` ya da `false` olabilir. Örneğin, `5 > 3` boolean bir ifadedir ve `true` değerini döndürür çünkü `5`, `3`'ten büyüktür. `5 < 3` boolean bir ifadedir ve `false` değerini döndürür çünkü `5`, `3`'ten küçük değildir.
+
+### Karşılaştırma Operatörleri
+
+Karşılaştırma operatörleri, iki değeri karşılaştırmak ve boolean bir değer döndürmek için kullanılır. Javascript'te 6 karşılaştırma operatörü vardır:
+
+- `>`: büyüktür
+- `<`: küçüktür
+- `>=`: büyüktür veya eşittir
+- `<=`: küçüktür veya eşittir
+- `==`: eşittir
+- `!=`: eşit değildir
+
+```javascript
+console.log(5 > 3); // true
+console.log(5 < 3); // false
+console.log(5 >= 3); // true
+console.log(5 <= 3); // false
+console.log(5 == 3); // false
+console.log(5 != 3); // true
+```
+
+## Koşul Çeşitleri
+
+Javascript'te 5 tür koşul vardır:
+
+- `if`
+- `if-else`
+- `if-else-if`
+- `switch`
+- ternary operator
+
+### if
+
+`if` ifadesi, bir koşul doğruysa bir kod bloğunu çalıştırmak için kullanılır. `if` ifadesinin sözdizimi şu şekildedir:
+
+```javascript
+if (koşul) {
+  // koşul doğruysa çalışacak kod
+}
+```
+
+Örneğin:
+  
+```javascript
+let havaDurumu = 'güneşli';
+
+if (havaDurumu === 'güneşli') {
+  console.log('Plaja gidiyorum!');
+}
+```
+
+Bu örnekte, hava durumunun güneşli olup olmadığı kontrol edilir ve eğer güneşliyse, bir mesaj konsola yazdırılır.
+
+### if-else
+
+`if-else` ifadesi, bir koşul doğruysa bir kod bloğunu, koşul yanlışsa başka bir kod bloğunu çalıştırmak için kullanılır. `if-else` ifadesinin sözdizimi şu şekildedir:
+
+```javascript
+if (koşul) {
+  // koşul doğruysa çalışacak kod
+} else {
+  // koşul yanlışsa çalışacak kod
+}
+```
+
+Örneğin:
+
+```javascript
+let havaDurumu = 'yağmurlu';
+
+if (havaDurumu === 'güneşli') {
+  console.log('Plaja gidiyorum!');
+} else {
+  console.log('Sinemaya gidiyorum!');
+}
+```
+
+Bu örnekte, hava durumunun güneşli olup olmadığı kontrol edilir. Eğer güneşliyse bir mesaj, değilse başka bir mesaj konsola yazdırılır.
+
+### if-else-if
+
+`if-else-if` ifadesi, birden fazla koşulu kontrol etmek ve her biri için farklı kod blokları çalıştırmak için kullanılır. `if-else-if` ifadesinin sözdizimi şu şekildedir:
+
+```javascript
+if (koşul1) {
+  // koşul1 doğruysa çalışacak kod
+} else if (koşul2) {
+  // koşul2 doğruysa çalışacak kod
+} else {
+  // koşul1 ve koşul2 yanlışsa çalışacak kod
+}
+```
 

@@ -52,7 +52,6 @@ After completing this topic, you'll be able to:
 - Use the standard box model and the alternative box model to layout HTML elements.
 
 
-
 ## What is CSS?
 
 CSS is a language used to style HTML elements. It is used to add colors, fonts, layouts, and more to web pages. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
@@ -738,7 +737,7 @@ li:hover {
 **Description**: Build a section of a webpage intended to display content in three columns. Use `div` elements to represent each column. Style each `div` so they have a border, padding, and a fixed width, and are arranged side by side.
 
 **Expected Tasks**:
+
 - Create three `div` elements to serve as columns.
 - Style the `divs` with a border, padding, and set a fixed width in percentage.
 - Use `float` or `display: inline-block` to position the `divs` side by side.
-

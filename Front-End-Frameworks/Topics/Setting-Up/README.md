@@ -1,5 +1,1 @@
-# Setting Up the Environment
-
-## Learning Outcomes
-
-After completing this topic, you'll be able to:
+IS in deploy _DELETE this

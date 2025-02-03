@@ -152,3 +152,150 @@ node index.js
 }
 ```
 
+# Node Paket Yöneticisi (*NPM*)
+
+Bu konuda, Node Paket Yöneticisi (NPM) hakkında bilgi edineceğiz.
+
+- [Node Paket Yöneticisi (*NPM*)](#node-paket-yöneticisi-npm)
+  - [Öğrenme Çıktıları](#öğrenme-çıktıları)
+  - [NPM Nedir?](#npm-nedir)
+  - [NPM Nasıl Kurulur?](#npm-nasıl-kurulur)
+  - [NPM Nasıl Kullanılır?](#npm-nasıl-kullanılır)
+  - [package.json Dosyası Nasıl Oluşturulur?](#packagejson-dosyası-nasıl-oluşturulur)
+  - [Paketler Nasıl Kurulur?](#paketler-nasıl-kurulur)
+  - [Paketler Nasıl Kaldırılır?](#paketler-nasıl-kaldırılır)
+  - [Paketler Nasıl Güncellenir?](#paketler-nasıl-güncellenir)
+  - [Paketler Nasıl Kullanılır?](#paketler-nasıl-kullanılır)
+  - [`ansi-colors` Paketini Kurup Kodda Kullanma Örneği](#ansi-colors-paketini-kurup-kodda-kullanma-örneği)
+    - [Örnekte Kullanılan Komutlar ve Kod](#örnekte-kullanılan-komutlar-ve-kod)
+    - [package.json Dosyası Oluşturma](#packagejson-dosyası-oluşturma)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra:
+
+- NPM'nin ne olduğunu tanımlayabileceksiniz
+- Bilgisayarınıza NPM kurabileceksiniz
+- NPM'yi kullanarak paketleri kurabilecek, kaldırabilecek ve güncelleyebileceksiniz
+- Paketleri kodunuzda kullanabileceksiniz
+- Bir `package.json` dosyası oluşturabileceksiniz
+- `node_modules` klasörünün ne olduğunu açıklayabileceksiniz
+- NPM kaydının ne olduğunu açıklayabileceksiniz
+
+## NPM Nedir?
+
+NPM, Node JS paketlerini kurmak ve yönetmek için kullanılan bir araçtır. Node JS ile birlikte yüklenir. [NPM kaydı](https://www.npmjs.com/), binlerce Node JS paketinin bulunduğu genel bir depodur. Paketler, belirli bir görevi yerine getirmek için kullanılan dosya koleksiyonlarıdır.
+
+## NPM Nasıl Kurulur?
+
+NPM, Node JS ile birlikte gelir. NPM'yi kurmak için [Node JS resmi web sitesinden](https://nodejs.org/en/download) Node JS yükleyicisini indirip kurmamız yeterlidir.
+
+## NPM Nasıl Kullanılır?
+
+NPM'yi kullanmak için bir terminal açıp `npm` komutunu ve ardından çalıştırmak istediğimiz komutu yazmamız yeterlidir. Örneğin, bir paket kurmak için `npm install paketAdi` komutunu kullanabiliriz.
+
+## package.json Dosyası Nasıl Oluşturulur?
+
+`package.json`, bir Node JS projesi hakkındaki bilgileri içeren bir dosyadır. Projenin adı, sürümü, yazarı, bağımlılıkları gibi bilgileri içerir. Bu dosya, NPM tarafından paketleri kurmak ve yönetmek için kullanılır.
+
+`package.json` dosyasını oluşturmak için bir terminal açıp `npm init` komutunu çalıştırmamız gerekir. Varsayılan değerlerle bir dosya oluşturmak için `npm init -y` komutunu kullanabiliriz.
+
+`package.json` dosyası şu şekilde görünebilir:
+
+```json
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "My Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Doe",
+  "license": "ISC",
+  "dependencies": {
+    "packageName": "1.0.0"
+  }
+}
+```
+
+## Paketler Nasıl Kurulur?
+
+Bir paket kurmak için terminalde `npm install paketAdi` komutunu yazmamız yeterlidir. Bu komut, paketi mevcut dizindeki `node_modules` klasörüne kurar ve `package.json` dosyasının `dependencies` bölümüne ekler.
+
+`node_modules` klasörü, yerel olarak kurulu tüm paketleri içerir. Bir paket kurulduğunda, `package-lock.json` dosyası da otomatik olarak oluşturulur.
+
+```bash
+npm install paketAdi
+```
+
+## Paketler Nasıl Kaldırılır?
+
+Bir paketi kaldırmak için terminalde `npm uninstall paketAdi` komutunu yazmamız yeterlidir. Bu komut, paketi `node_modules` klasöründen kaldırır ve `package.json` dosyasının `dependencies` bölümünden siler.
+
+```bash
+npm uninstall paketAdi
+```
+
+## Paketler Nasıl Güncellenir?
+
+Bir paketi güncellemek için terminalde `npm update paketAdi` komutunu yazmamız yeterlidir. Bu komut, paketi günceller ve `package.json` dosyasındaki sürüm bilgisini günceller.
+
+```bash
+npm update paketAdi
+```
+
+## Paketler Nasıl Kullanılır?
+
+Bir paketi kullanmak için, onu kodumuzda `require()` fonksiyonuyla içe aktarmamız gerekir. Örneğin:
+
+```javascript
+const paketAdi = require('paketAdi');
+```
+
+## `ansi-colors` Paketini Kurup Kodda Kullanma Örneği
+
+[`ansi-colors`](https://www.npmjs.com/package/ansi-colors) paketi, terminaldeki metne renk eklemek için kullanılan bir pakettir.
+
+Aşağıdaki örnekte, `index.js` adlı bir dosya oluşturuyoruz, `npm init -y` komutuyla bir `package.json` dosyası oluşturuyoruz, `ansi-colors` paketini `npm install ansi-colors` komutuyla kuruyoruz ve bu paketi kodumuzda kullanıyoruz.
+
+![NPM Kullanımı](UsingNPM.gif)
+
+### Örnekte Kullanılan Komutlar ve Kod
+
+```bash
+npm init -y
+npm install ansi-colors
+```
+
+```javascript
+const colors = require('ansi-colors');
+
+console.log(colors.red('Merhaba dünya!'));
+console.log(colors.yellow('Merhaba dünya!'));
+console.log(colors.green('Merhaba dünya!'));
+```
+
+```bash
+node index.js
+```
+
+### package.json Dosyası Oluşturma
+
+```json
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ansi-colors": "^4.1.3"
+  }
+}
+

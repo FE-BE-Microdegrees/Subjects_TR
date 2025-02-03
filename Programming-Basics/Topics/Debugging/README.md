@@ -39,3 +39,46 @@ First of all, we should test our code as we write it. We should not wait until w
 
 - Use the built-in debugger to set breakpoints in your code and inspect the values of variables at those breakpoints.
 - Use `console.log()` statements to print the values of variables at different points in your code.
+- 
+# Hata Ayıklama (Debugging)
+
+Bu konu başlığında, Node.js'de hata ayıklama işlemini ö\u011reneceğiz.
+
+- [Hata Ayıklama](#hata-ayiklama)
+  - [Öğrenme Çıktıları](#ogrenme-ciktilari)
+  - [Hata Ayıklama Nedir?](#hata-ayiklama-nedir)
+  - [Hata Ayıklama Araçları](#hata-ayiklama-araclari)
+  - [Hata Ayıklama İpuçları](#hata-ayiklama-ipuclari)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra:
+
+- Hata ayıklamanın ne olduğunu tanımlayabileceksiniz.
+- Kendi kodunuzu hata ayıklamak için farklı yöntemleri kullanabileceksiniz.
+
+## Hata Ayıklama Nedir?
+
+Gerçek hayatta bir şeyin nasıl çalıştığını anlamak istiyorsak, süreci izleyebiliriz; bazen bu süreci kesintiye uğratarak neler olduğunu gözlemleyebiliriz. Örneğin, yemek yaparken tadı, sıcaklığı ve zamanı gibi *parametreleri* ölçebiliriz. Ölçüm sonucuna göre ne yapacağımıza karar verebiliriz – biraz tuz ekleyebilir, baharat değişikliğine gidebilir veya pişirme süresini ayarlayabiliriz.
+
+Programlamada, bazen programımız neden beklediğimiz gibi çalışmıyor anlamayabiliriz. Gerçek hayatta olduğu gibi, bu süreci izleyebilir ve neler olduğunu gözlemleyebiliriz. Bu sürece **hata ayıklama** denir.
+
+Hata ayıklama, bir programdaki hataları bulma ve düzeltme sürecidir. Hata, bir programın beklenmedik bir şekilde davranmasına neden olan bir yanlıştır. Hata ayıklama, programcılar için önemli bir beceridir çünkü programlarındaki hataları bulup düzeltebilmelerini sağlar.
+
+## Hata Ayıklama Araçları
+
+Node.js, yerleşik bir hata ayıklama aracına sahip olsa da, genellikle bir kod düzenleyicisine entegre edilmiş hata ayıklama aracını kullanmak daha kolaydır. Çoğu kod düzenleyicisi, kodumuzu satır satır geçip her adımda değişkenlerin değerlerini incelememize olanak tanıyan yerleşik hata ayıklama aracına sahiptir. Örneğin, **Visual Studio Code** (VS Code) yerleşik bir hata ayıklama aracı sunar.
+
+Visual Studio Code'un yerleşik hata ayıklama aracını kullanmak için, programımızı hata ayıklama modunda başlatmamız gerekir. Bunun için `F5` tuşuna basabilir veya `Çalıştır > Hata Ayıklamayı Başlat` menüsüne tıklayabiliriz. Daha sonra hata ayıklama ortamını, bizim durumumuzda `Node.js`, seçebiliriz. Kodumuzda bir **kesme noktaları** (breakpoint) ayarlamak için ilgili satır numarasına tıklayabiliriz. Kesme noktaları, hata ayıklama aracının kodun yürütülmesini durdurmasını ve değişkenlerin değerlerini incelememizi sağlar. Ardından `F5` tuşuna basarak veya `Çalıştır > Hata Ayıklamayı Başlat` menüsüne tıklayarak hata ayıklamaya başlayabiliriz. Daha sonra kodumuzu adım adım ilerleyerek değişkenlerin değerlerini inceleyebiliriz.
+
+![VSCode'da Node.js ile Hata Ayıklama](DebuggingNodeJSInVSCode.gif)
+
+Basit programlar için, kodumuzun farklı noktalarındaki değişkenlerin değerlerini yazdırmak için `console.log()` ifadelerini kullanabiliriz. Örneğin, kodumuzun belli bir noktasında `x` değişkeninin değerini bilmek istiyorsak, o noktaya bir `console.log(x)` ifadesi ekleyebilir ve programımızı çalıştırabiliriz. Ardından `console.log(x)` çıktısına bakarak `x` değişkeninin değerini görebiliriz. Bu, kodumuzu hata ayıklamanın basit bir yoludur, ancak her seferinde `console.log()` ifadeleri eklemek ve programı tekrar çalıştırmak zorunda kaldığımız için verimli bir yöntem değildir.
+
+## Hata Ayıklama İpuçları
+
+İlk olarak, kodumuzu yazarken test etmeliyiz. Çok fazla kod yazana kadar beklememeliyiz; sık sık test yapmalıyız. Bu, kodumuzdaki hataları erken bulmamıza ve düzeltmemize yardımcı olur. Çoğu hata basit hatalardan kaynaklanır, örneğin yazım hataları, eksik noktalı virgüller ve eksik parantezler. Kodumuzu çalıştırmadan önce her zaman bu basit hataları kontrol etmeliyiz.
+
+- Kodunuzda kesme noktaları belirlemek ve bu noktalardaki değişken değerlerini incelemek için yerleşik hata ayıklama aracını kullanın.
+- Kodunuzun farklı noktalarındaki değişken değerlerini yazdırmak için `console.log()` ifadelerini kullanın.
+

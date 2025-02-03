@@ -57,3 +57,81 @@ We will talk about the tools we use as we move along with the topics.
 
 - Have you previously encountered programming?
 - What programming languages have you heard of before?
+
+# Programlama Temelleri  
+
+Bu bölümde, **Programlama Temelleri** dersi hakkında genel bilgiler ve bu derste neler öğreneceğinizi bulabilirsiniz.  
+
+---
+
+## Giriş  
+### Bu dersin amacı nedir?  
+### Programlama nedir ve neden önemlidir?  
+### Bu derste ne öğreneceğiz?  
+### Hangi dili kullanacağız?  
+### Hangi araçları kullanacağız?  
+
+---
+
+## Bu Dersin Amacı Nedir?  
+Bu dersin amacı, programlama dünyasına adım atmaktır. Programlamanın temellerini öğrenerek, JavaScript kullanarak kod yazmayı ve planlamayı öğreneceğiz.  
+
+Bu ders, **Front-End (Ön Yüz)** ve **Back-End (Arka Yüz)** geliştirme için temel oluşturur. Programlamanın temel kavramlarını anlamaya yardımcı olur. Daha önce programlama yapmamış, ancak öğrenmek isteyen kişiler için tasarlanmıştır.  
+
+---
+
+## Programlama Nedir ve Neden Önemlidir?  
+Programlama, bilgisayarın belirli görevleri gerçekleştirmesi için talimatlar yazma sürecidir.  
+
+- Bu talimatlar bir programlama dili kullanılarak yazılır.  
+- Programlama dilleri, makine koduna çevrilerek bilgisayarlar tarafından çalıştırılabilir.  
+- Algoritmalar tasarlama ve kod geliştirme gibi yaratıcı süreçleri kapsar.  
+
+Programlama, problem çözme yeteneği kazandırır ve günümüz dijital dünyasında oldukça değerli bir beceridir. Üstelik herkes tarafından öğrenilebilir!  
+
+---
+
+## Bu Derste Ne Öğreneceğiz?  
+Bu derste programlamanın temel bilgilerini öğreneceğiz. İçerik şu şekildedir:  
+
+- **Değişkenler (Variables)**  
+- **Veri Tipleri (Data Types)**  
+- **Kontrol Yapıları (Control Structures)**  
+- **Operatörler ve İfadeler (Operators and Expressions)**  
+- **Döngüler (Loops)**  
+- **Fonksiyonlar (Functions)**  
+- **Basit Algoritmalar Geliştirme**  
+
+Ayrıca, ilk kodlarımızı yazmayı ve hata ayıklamayı öğreneceğiz. Bu, yazılım geliştirme ve bilgisayar bilimlerinde ileri seviye çalışmalar için bir temel oluşturacaktır.  
+
+---
+
+## Hangi Dili Kullanacağız?  
+Pek çok farklı programlama dili vardır ve her biri farklı amaçlar için uygundur.  
+
+Bu ders için **JavaScript** kullanacağız.  
+
+- JavaScript, hem ön yüz hem de arka yüz geliştirme için yaygın olarak kullanılır.  
+- Web geliştirme dünyasında olmazsa olmaz bir beceridir.  
+
+Not: JavaScript programlama öğrenmek için en kolay dil olmasa da web geliştirme için büyük önem taşır.  
+
+---
+
+## Hangi Araçları Kullanacağız?  
+Programlama yapmak için bazı araçlar gereklidir. Bu araçlar kod yazmayı, çalıştırmayı ve yönetmeyi kolaylaştırır.  
+
+### Kullanacağımız Başlıca Araçlar:  
+- **Kod Düzenleyicisi (Code Editor)**  
+- **Node.js**  
+- **Tarayıcı (Browser)**  
+- **Git**  
+- **GitHub**  
+
+Her bir aracı konu ilerledikçe detaylı olarak inceleyeceğiz.  
+
+---
+
+## Sorular  
+- Daha önce programlama ile karşılaştınız mı?  
+- Hangi programlama dillerini daha önce duydunuz?  

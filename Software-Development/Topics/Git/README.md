@@ -339,3 +339,341 @@ Try to explain the following concepts in your own words:
 
 Next steps:
 - install `git` on your computer
+
+# Git
+
+Bu konuda, Git ve sürüm kontrolünün temellerini öğreneceğiz. Sürüm kontrol sistemlerinin önemi, Git’in temelleri ve Git akış süreci hakkında bilgi vereceğiz.
+
+- [Git](#git)
+  - [Öğrenme Çıktıları](#öğrenme-çıktıları)
+  - [Git Nedir?](#git-nedir)
+  - [Temel Git Mimarisi](#temel-git-mimarisi)
+  - [Git Yükleme](#git-yükleme)
+  - [Temel Git Kavramları](#temel-git-kavramları)
+  - [Temel Git Komutları](#temel-git-komutları)
+  - [Grafiksel Git İstemcileri](#grafiksel-git-istemcileri)
+    - [Git İçin Popüler Grafiksel İstemciler:](#git-için-popüler-grafiksel-istemciler)
+    - [Grafiksel Git İstemcileri Kullanmanın Nedenleri:](#grafiksel-git-istemcileri-kullanmanın-nedenleri)
+  - [Git Akışı](#git-akışı)
+    - [1. **Ana Dallar**:](#1-ana-dallar)
+    - [2. **Destekleyici Dallar**:](#2-destekleyici-dallar)
+    - [**Temel Git Akış Süreci**:](#temel-git-akış-süreci)
+  - [Git Barındırma Platformları](#git-barındırma-platformları)
+  - [Alıştırmalar](#alıştırmalar)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+
+- Sürüm kontrol sistemlerinin önemini anlayabileceksiniz;
+- Git ve sürüm kontrolünün temellerini açıklayabileceksiniz;
+- Temel Git mimarisini açıklayabileceksiniz;
+- Temel Git kavramlarını açıklayabileceksiniz;
+- Temel Git akışını açıklayabileceksiniz;
+
+## Git Nedir?
+
+```mermaid
+    gitGraph
+       commit id: "Projeyi oluştur"
+       commit id: "Proje temeli"
+       branch nice_feature_branch
+       checkout nice_feature_branch
+       commit id: "Frontend iskeletini ekle"
+       checkout nice_feature_branch
+       commit id: "Frontend'i API ile bağla"
+       checkout nice_feature_branch
+       commit id: "Frontend testlerini ekle"
+       checkout main
+       merge nice_feature_branch id: "Temel frontend" tag: "Versiyon 1.0"
+       commit id: "Dokümantasyon oluştur"
+       checkout main
+       commit id: "Dokümantasyonu güncelle"
+
+```
+
+**Git**, yazılım geliştirme sırasında kaynak kodundaki değişiklikleri izlemek için kullanılan dağılmış bir versiyon kontrol sistemidir (_DVCS_). Küçükten çok büyük projelere kadar her şeyi hız ve verimlilikle yönetmek için tasarlanmıştır. **Git**, birden fazla geliştiricinin aynı kod tabanı üzerinde birbirlerine müdahale etmeden işbirliği yapmalarını sağlar.
+
+Git, 2005 yılında Linux çekirdeğinin geliştirilmesi için Linus Torvalds tarafından yaratılmıştır. Benimsenmesi hızla artmış ve şimdi yazılım endüstrisindeki egemen versiyon kontrol sistemi haline gelmiştir. Google, Facebook, Microsoft ve Twitter gibi şirketler, kod tabanlarını yönetmek için Git'i kullanmaktadır.
+
+İşte **Git**'in ana özellikleri ve özellikleri:
+
+- **Dağıtık Sistem**: Tek bir merkezi depo bulunan merkezi versiyon kontrol sistemlerinin aksine, **Git**'te her geliştiricinin kod kopyası, tüm tarihçe ve versiyon takibi özelliklerini içerebilen bir depo olarak işlev görür. Bu, yedekliliği garanti eder ve dallanma (branching) ve birleştirme (merging) işlemlerini son derece verimli hale getirir.
+- **Dallanma ve Birleştirme**: **Git**'in dallanma modeli, geliştiricilerin özellik geliştirme veya hata düzeltmeleri için izole dallar yaratmasına olanak tanır. Bu dallar daha sonra ana dal (genellikle 'master' dalı olarak bilinir) ile birleştirilebilir.
+- **Geçmiş**: **Git** proje geçmişinin tamamını takip eder. Her commit, kontrol edilen ve geri alınabilen bir özet (checksum) içerir, bu da bütünlük ve izlenebilirlik sağlar.
+- **Aşama Alanı (Staging Area)**: **Git**, _aşama alanı_ veya _index_ adı verilen benzersiz bir kavramı tanıtır. Bu, commit'lerin tamamlanmadan önce biçimlendirilebileceği ve gözden geçirilebileceği ara bir alandır.
+- **Performans**: **Git** işlemleri yerel olarak gerçekleştirilir, bu da ağ işlemlerine dayanan birçok versiyon kontrol sistemine kıyasla daha hızlı olmasını sağlar.
+- **Bütünlük**: **Git** verilerini kontrol etmek için SHA-1 adı verilen bir karma algoritması kullanır. Bu, versiyon geçmişinin bütünlüğünü garanti eder.
+- **Esneklik**: **Git** çeşitli iş akışlarını destekler, merkezi sistemlerden tamamen dağıtık sistemlere kadar, bu da farklı proje ihtiyaçlarına uyum sağlamasını sağlar.
+- **İşbirliği Platformları**: _GitHub_, _GitLab_ ve _Bitbucket_ gibi platformlar, **Git**'in işbirliği olanaklarını artırarak kod barındırma, pull request'ler, kod incelemeleri ve hata izleme gibi hizmetler sunar.
+- **Ücretsiz ve Açık Kaynak**: **Git**, GNU Genel Kamu Lisansı sürüm 2 altında dağıtılan ücretsiz bir yazılımdır.
+
+- ## Temel Git Mimarisi
+
+Git, verimli ve güçlü olmasını sağlayan benzersiz bir mimariye ve veri modeline sahiptir. İşte Git'in temel bileşenlerinin bir açıklaması:
+
+- **Bloklar (Blobs)**:
+  - Git'teki bir dosyanın içeriğini temsil eder.
+  - Bir blob, dosya verilerini tutar ancak dosya hakkında herhangi bir meta veriye sahip değildir.
+  - Bu, ikili büyük bir nesnedir ve içeriğinin SHA-1 hash’i ile tanımlanır.
+- **Ağaçlar (Trees)**:
+  - Git'teki bir dizini veya klasörü temsil eder.
+  - Bir ağaç nesnesi, isimleri blob'lara veya diğer ağaçlara (temelde alt dizinler için başka ağaçlara) eşler.
+  - Blob'lar gibi, ağaçlar da bir SHA-1 hash’i ile tanımlanır.
+- **Commit'ler (Commits)**:
+  - Depodaki belirli bir zamanı temsil eder.
+  - Bir commit, depo durumunu belirli bir zamanda yakalayan bir ağaca işaret eder.
+  - Aşağıdaki gibi meta veriler içerir:
+    - Yazar
+    - Commit yapan kişi
+    - Tarih
+    - Commit mesajı
+  - Her commit, aynı zamanda ebeveyn commit'ine işaret eder, böylece bağlı bir liste oluşturur. Bu, Git'teki "tarihçeyi" yaratır. Birleştirme commit'leri, birden fazla ebeveyn commit'ine işaret edebilir.
+  - SHA-1 hash’i ile tanımlanır.
+- **Dallar (Branches)**:
+  - Bir commit’e hareket eden bir işaretçi.
+  - Bir dal oluşturduğunuzda, Git, o anda bulunduğunuz commit'e bir işaretçi oluşturur.
+  - Yeni commit'ler oluşturuldukça, dal işaretçisi otomatik olarak en son commit'e işaret edecek şekilde hareket eder.
+  - Çoğu depoda varsayılan dal "master" olarak adlandırılır (ancak son zamanlarda "main" olarak adlandırılmaya doğru bir kayma gözlemlenmiştir).
+  - Dallar, özellikler veya deneylerin ana kod tabanına birleştirilmeden önce izole bir şekilde geliştirilebilmesi için sapma geliştirmeye olanak tanır.
+
+Bu mimari, yönlendirilmiş asiklik bir grafik üzerine kurulu olup, Git'in değişiklikleri verimli bir şekilde takip etmesini, dallar oluşturmasını ve tarihçeleri birleştirmesini sağlar. SHA-1 hash’lerinin kullanımı, depo bütünlüğünü ve tutarlılığını kopyalar ve sürümler arasında garanti eder.
+
+## Git Kurulumu
+
+Git'in en son sürümüne ve kurulum talimatlarına [git-scm.com](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) adresinden ulaşabilirsiniz.
+
+## Temel Git Terminolojisi
+
+Git, kendine özgü bir terminolojiye sahiptir ve bu terimleri anlamak, Git ile etkili çalışmanın anahtarıdır. İşte bazı temel Git terimlerinin genel bir özeti:
+
+- **Depo (Repo)**:
+  - Projenizin bulunduğu dizin veya depolama alanıdır. Tüm proje dosyalarını ve tüm revizyon geçmişini içerir.
+  - Yerel (bilgisayarınızda) veya uzak (örneğin, bir sunucuda veya GitHub gibi bir hizmette) olabilir.
+- **Commit**:
+  - Dosyalarda yapılan değişiklik veya düzenlemeler setidir. Her commit, benzersiz bir SHA-1 hash kodu ile tanımlanır.
+  - Depodaki dosyaların ve dizin yapısının belirli bir zaman dilimindeki anlık görüntüsünü temsil eder.
+- **Dal (Branch)**:
+  - Depo için paralel bir versiyonudur. Ana projeden ayrılarak, ana veya "master" dalını etkilemeden çalışabileceğiniz ayrı bir alana sapar.
+  - Yeni özellikler geliştirmek veya fikirleri test etmek için kullanışlıdır.
+- **Master veya main**:
+  - Varsayılan geliştirme dalıdır. Bir Git deposu oluşturduğunuzda, "master" veya "main" adında bir dal oluşturulur ve bu dal aktif dal olur.
+  - Not: Son zamanlarda, sektörde bu varsayılan dalın adını kapsayıcılık amaçlı olarak "main" olarak değiştirme eğilimi vardır.
+- **Clone (Klonlama)**:
+  - Depodan bilgisayarınıza kopyalanan bir reponun versiyonudur. Sunucuda veya başka bir yerdeki orijinal depo yerine bilgisayarınızda bulunur.
+  - `git clone [URL]` komutu, mevcut bir URL'den bir depoyu klonlamak (veya kopyalamak) için kullanılır.
+- **Fork (Çatal)**:
+  - Başka bir kullanıcının deposunun kişisel kopyasıdır. Fork, başkasının projesine değişiklikler önerirken veya başkasının projesini kendi fikriniz için başlangıç noktası olarak kullanırken kullanılır.
+- **Pull**:
+  - Uzak bir depodan veya dalından değişiklikleri alıp, mevcut dalınıza birleştirmek anlamına gelir.
+  - `git pull [remote] [branch_name]` komutu, değişiklikleri çekmek (pull) için kullanılır.
+- **Push (Gönderme)**:
+  - Yapılan commit'leri uzak bir depoya göndermek anlamına gelir.
+  - `git push [remote] [branch_name]` komutu, değişikliklerinizi göndermek (push) için kullanılır.
+- **HEAD**:
+  - Depodaki belirli bir commit'e işaret eden özel bir işaretçi veya referanstır. Varsayılan olarak, şu anda bulunduğunuz dalda en son commit'e işaret eder.
+- **Merge (Birleştirme)**:
+  - Bir dalın değişikliklerini başka bir dala entegre etme sürecidir.
+- **Merge Çatışması (Merge Conflict)**:
+  - Aynı dosyanın aynı satırında çelişkili değişiklikler yapıldığında veya bir kişi bir dosyayı düzenlerken, başka bir kişi aynı dosyayı silerse çatışma meydana gelir.
+  - Git, farkları vurgular ve hangi değişikliklerin saklanacağına karar vermeniz için sizi yönlendirir.
+- **Pull Request (PR)**:
+  - GitHub gibi platformlarda, bir pull request, bir forktan veya bir daldan değişiklikler önerme yoludur ve bu değişiklikler daha sonra başka bir dal ile birleştirilebilir, genellikle master/main dalına.
+- **Remote (Uzak)**:
+  - Projenizin internet veya ağ üzerinde barındırılan versiyonudur. Birden fazla uzak depo olabilir ve bunlar başkalarıyla işbirliği yaparken kullanışlıdır.
+- **Aşama Alanı (veya Index)**:
+  - Commit'lerin tamamlanmadan önce biçimlendirilebileceği ve gözden geçirilebileceği ara bir alandır.
+  - `git add [file_name]` komutu, değişiklikleri aşama alanına eklemek için kullanılır.
+- **Fetch (Alma)**:
+  - Uzak bir depodan yeni veriler indirme işlemidir. `pull` komutunun aksine, `fetch` veriyi alır ancak birleştirme yapmaz.
+- **Tag (Etiket)**:
+  - Belirli bir commit'e referans veya işaretçidir, genellikle önemli bir tarihsel noktayı, örneğin bir sürümün yayınlandığı zamanı işaretlemek için kullanılır.
+
+Bu genel bakış, Git'e yeni başlayanların karşılaşacağı temel terimleri kapsamaktadır. Daha derine indikçe, doğal olarak daha ileri düzey kavramlar ve terimler ile karşılaşacaksınız.
+
+## Temel Git Komutları
+
+İşte bazı temel Git komutlarının ve açıklamalarının genel bir özeti:
+
+- **`git init`**:
+  - Yeni bir Git deposu başlatır ve mevcut bir dizini izlemeye başlar.
+  - Versiyon kontrolü için gerekli olan iç veri yapısını barındıran gizli bir alt klasör ekler.
+- **`git clone [url]`**:
+  - Zaten uzakta bulunan bir projenin yerel kopyasını oluşturur.
+  - Klon, projenin tüm dosyalarını, geçmişini ve dallarını içerir.
+- **`git add [file-name.txt]`**:
+  - Dosyadaki değişiklikleri aşama alanına ekler.
+  - Değişiklikleri commit için hazırlar ve paketler.
+- **`git add .`**:
+  - Geçerli dizindeki tüm değişiklikleri aşama alanına ekler (farklı dosyalarda yapılan birkaç değişikliği takip etmek için kullanışlıdır).
+- **`git commit -m "[commit mesajı]"`**:
+  - Projenin şu anki aşama alanındaki değişikliklerinin bir anlık görüntüsünü alır.
+- **`git status`**:
+  - Değişikliklerin durumunu izlenmeyen, değiştirilmiş veya aşamaya alınmış olarak gösterir.
+- **`git branch`**:
+  - Depodaki tüm yerel dalları listeler.
+  - Tüm dalları (uzak dahil) görmek için `git branch -a` komutunu kullanın.
+- **`git branch [branch-name]`**:
+  - Yeni bir dal oluşturur.
+- **`git checkout [branch-name]`**:
+  - Belirtilen dala geçer ve çalışma dizinini günceller.
+  - Not: Bu komut evrimleşti. Yeni Git sürümlerinde `git switch [branch-name]` komutunu kullanabilirsiniz.
+- **`git merge [branch-name]`**:
+  - Belirtilen dalın geçmişini, geçerli dalınıza birleştirir.
+- **`git pull`**:
+  - Geçerli yerel çalışma dalınızı, GitHub'daki ilgili uzak dal ile tüm yeni commit'lerle günceller.
+- **`git push [remote-name] [branch-name]`**:
+  - Yerel dal güncellemelerinizi GitHub'daki ilgili uzak dalına gönderir.
+- **`git log`**:
+  - Dalın mevcut durumuna kadar yapılan tüm commit'lerin sıralı listesini gösterir.
+  - Çıktı formatını özelleştirmek için birçok seçenek vardır, örneğin `git log --oneline` komutu daha sıkıştırılmış bir görünüm sağlar.
+- **`git diff`**:
+  - Henüz aşamaya alınmamış dosya farklarını gösterir.
+- **`git diff --staged`**:
+  - Aşamaya alınmış değişikliklerin son commit ile karşılaştırılmasını gösterir.
+- **`git remote add [alias] [url]`**:
+  - Yerel projeye bir uzak depo ekler.
+- **`git remote -v`**:
+  - Yerel projeye bağlı tüm uzak depoları listeler.
+- **`git fetch`**:
+  - Uzak depodan tüm güncellemeleri alır (birleştirme yapmaz).
+- **`git revert [commit]`**:
+  - Belirli bir commit'te yapılan tüm değişiklikleri yeni bir commit ile geri alır.
+- **`git reset`**:
+  - Aşama alanını en son commit ile eşleşecek şekilde sıfırlar, ancak çalışma dizinini değiştirmez. `git add` komutunu geri almak için kullanışlıdır.
+
+Bu liste, başlamanız için gerekli temel komutları kapsar. Git, çok çeşitli komutlara sahip derin bir araçtır ve deneyim kazandıkça farklı senaryolarda kullanılabilecek daha ileri düzey komutlar ve seçenekler keşfedeceksiniz.
+
+## Grafiksel Git İstemcileri
+
+**Grafiksel Git İstemcileri**, Git ile etkileşimde bulunmak için komut satırına dayanmak yerine görsel bir arayüz sağlayan uygulamalardır. Versiyon geçmişini, dalları ve bir Git deposunun diğer yönlerini görsel olarak temsil ederler.
+
+Grafiksel istemciler son derece yardımcı olabilir, özellikle komut satırından rahatsız olmayanlar için, ancak Git'in bazı inceliklerini soyutlarlar. Daha derin ve karmaşık işlemler için veya Git'in iç işleyişini tam olarak anlamak için komut satırıyla aşina olmak faydalıdır. Her iki yaklaşımın da avantajları vardır ve birçok geliştirici, her iki yöntemi bir arada kullanmanın (komut satırı ve GUI) en
+
+### Grafiksel Git İstemcilerini Kullanma Nedenleri:
+
+- **Kullanıcı Dostu**: Başlangıç seviyesindeki kullanıcılar için komut satırı korkutucu olabilir. Grafiksel istemciler, Git ile etkileşim kurmak için daha erişilebilir ve sezgisel bir arayüz sunar.
+- **Görselleştirme**: Dalları, commit'leri, birleştirmeleri ve daha fazlasını net bir şekilde görsel olarak temsil ederler. Bu, bir deponun commit akışını ve yapısını anlamada özellikle faydalıdır.
+- **Karmaşık Görevleri Basitleştirir**: Bazı Git görevleri komut satırında karmaşık ve uzun olabilir. GUI istemcileri bu işlemleri daha yönetilebilir adımlara indirger veya sürükle-bırak arayüzü sağlar.
+- **Çatışma Çözümü**: Birçok grafiksel istemci, birleştirme çatışmalarını çözmek için görsel bir yol sunar, bu da metin düzenleyicilerindeki çatışma işaretçilerini manuel olarak düzenlemekten bazen daha kolay ve daha anlaşılır olabilir.
+- **Entegre Araçlar**: Grafiksel istemciler, Git blame, depo barındırma hizmetleri gibi yerleşik araçlar veya entegrasyonlarla birlikte gelebilir.
+- **Çoklu Görev Desteği**: GUI'ler genellikle birden fazla depo üzerinde ayrı sekmeler/pencerelerle çalışmanıza olanak tanır, bu da bağlam değiştirmeyi daha kolay hale getirir.
+- **Anında Geri Bildirim**: Birçok GUI, birleştirme sonucu veya belirli bir commit'te yapılan değişiklikler gibi çoğu işlem için anında görsel geri bildirim sağlar.
+- **Git Dışı Operasyonları Destekler**: Bazı GUI'ler, bir dosyayı tercih edilen editörde açma, komut geçmişini görüntüleme veya özel betikler çalıştırma gibi Git işlemleri dışındaki özellikler sunar.
+
+## Git Akışı
+
+Git Akışı, Git’te popüler bir iş akışı metodolojisidir ve dallanma ve birleştirme için yapılandırılmış bir yaklaşım tanımlar. Büyük projeleri yönetmek için sağlam bir çerçeve sağlar ve başka geliştiricilerle ortak bir depoda iş birliği yapmayı basitleştirebilir. Aşağıda, Git Akışı sürecini, özellikle dal kullanımı açısından özetleyeceğim:
+
+### 1. **Ana Dallar**:
+
+- **`main` (eski adıyla `master`)**:
+  - Bu dal, resmi sürüm geçmişini içerir.
+  - `main` dalındaki tüm commit'ler, tamamen test edilmiş ve dağıtıma hazır bir yazılım sürümünü temsil eder.
+- **`develop`**:
+  - Özellikler için birleştirme dalı olarak hizmet eder.
+  - Bir sonraki sürüm için yapılacak tüm değişiklikler bu dala entegrasyon edilir.
+
+### 2. **Destekleyici Dallar**:
+
+Bu dallar, paralel geliştirmeyi desteklemek, özellikleri kolayca takip etmek, sürüme hazırlık yapmak ve canlı sorunları hızlıca çözmek için kullanılır.
+
+- **Özellik Dalları**:
+  - Şuradan dalar: `develop`
+  - Geri birleştirilir: `develop`
+  - İsimlendirme kuralı: `main`, `develop`, `release-*` veya `hotfix-*` dışında herhangi bir şey.
+  - Amaç: Yeni özellikler veya iyileştirmeler geliştirmek için kullanılır. Özellik geliştirilene kadar var olurlar.
+
+    ```mermaid
+    graph LR
+        A[develop] --> B[feature/feature_name]
+        B --> A
+    ```
+
+- **Sürüm Dalları**:
+  - Şuradan dalar: `develop`
+  - Geri birleştirilir: `main` ve `develop`
+  - İsimlendirme kuralı: `release-*`
+  - Amaç: Yeni bir ürün sürümü hazırlamak için kullanılır. Bu dalda sürümler etiketlenir ve üretime gitmeden önce hata düzeltmeleri yapılabilir.
+
+    ```mermaid
+    graph LR
+        A[develop] --> B[release/version_number]
+        B --> C[main]
+        B --> A
+    ```
+
+- **Hotfix Dalları**:
+  - Şuradan dalar: `main`
+  - Geri birleştirilir: `main` ve `develop`
+  - İsimlendirme kuralı: `hotfix-*`
+  - Amaç: `main` dalındaki istenmeyen bir duruma hemen müdahale edilmesi gerektiğinde ortaya çıkar. Üretim sürümlerini hızla yama yapmak için kullanılır.
+
+    ```mermaid
+    graph LR
+        A[main] --> B[hotfix/issue]
+        B --> A
+        B --> C[develop]
+    ```
+
+### **Temel Git Akışı Süreci**:
+
+```mermaid
+gitGraph
+    commit id: "Proje oluşturuldu"
+    branch develop
+    checkout develop
+    commit id: "Proje tabanı"
+    branch feature/nice_feature
+    checkout feature/nice_feature
+    commit id: "Frontend iskeleti eklendi"
+    commit id: "Frontend API ile bağlantı kuruldu"
+    commit id: "Frontend testleri eklendi"
+    checkout develop
+    merge feature/nice_feature
+    branch release/1.0
+    checkout release/1.0
+    commit id: "Sürüme hazırlanıyor"
+    checkout main
+    merge release/1.0 id: "Sürüm 1.0 Yayınlandı" tag: "Sürüm 1.0"
+    checkout develop
+    merge release/1.0
+    checkout main
+
+```
+
+1. **Başlatma**:
+   Bir Git deposu başlatın ve ardından boş bir `main` ve `develop` dalı oluşturun.
+2. **Yeni Bir Özellik Başlatma**:
+   Her yeni özellik için, `develop` dalından yeni bir dal oluşturun ve üzerinde çalıştığınız özelliğe göre adlandırın.
+3. **Tamamlanan Özelliği Dahil Etme**:
+   Özellik tamamlandığında ve test edildiğinde, geri `develop` dalına birleştirilir. Bir sonraki sürüm döngüsü için `main` dalına entegrasyon bekler.
+4. **Sürüm Zamanı**:
+   Yeterince özellik hazır olduğunda veya önceden belirlenmiş bir sürüm noktası ulaşıldığında, `develop` dalı bir sürüm dalına ayrılır ve burada son testler yapılır.
+5. **Main ile Birleştirme**:
+   Sürüm dalı yeterince test edildikten sonra, `main` dalına birleştirilir ve bir sürüm numarası ile etiketlenir. Daha sonra, gelecek döngüdeki özelliklerin hotfix'ler ve güncellemelerle uyumlu olmasını sağlamak için tekrar `develop` dalına birleştirilmesi gerekir.
+6. **Hotfix'ler**:
+   Eğer `main` dalında bir sorun tespit edilirse ve hemen bir düzeltme yapılması gerekirse, bir hotfix dalı oluşturulur. Hotfix tamamlandığında, hem `main` dalına (etiketlenmiş olarak) hem de `develop` dalına birleştirilir.
+
+Git Flow, büyük ölçekli projeler için katı bir çerçeve sunar, ancak küçük projeler veya ekipler için fazla karmaşık olabilir. Bazı ekipler, GitHub Flow veya GitLab Flow gibi daha basit iş akışlarını tercih edebilir. Yine de Git Flow'u anlamak, karmaşık senaryolarda dallanmanın nasıl kullanılacağı konusunda sağlam bir temel sağlar.
+
+## Git Hosting Platformları
+
+Git'i yerel olarak kullanabiliriz, ancak daha yaygın olarak bir uzaktan Git hosting platformu kullanılır. Bu platformlar, Git depolarını saklamak ve üzerinde iş birliği yapmak için merkezi bir yer sağlar. Ayrıca, hata izleme, pull request'ler, kod incelemeleri ve daha fazlası gibi ek özellikler sunar.
+
+İşte bazı popüler Git hosting platformları:
+
+- [**GitHub**](https://github.com)
+- [**GitLab**](https://gitlab.com)
+- [**Bitbucket**](https://bitbucket.org)
+- vb.
+
+## Alıştırmalar
+
+Aşağıdaki kavramları kendi kelimelerinizle açıklamayı deneyin:
+- Git ve Sürüm Kontrolü nedir?
+- Git terimlerinden en az dört tanesini sayın.
+- En az bir Git hosting platformu ismi sayın.
+
+Sonraki adımlar:
+- Bilgisayarınıza `git` yükleyin

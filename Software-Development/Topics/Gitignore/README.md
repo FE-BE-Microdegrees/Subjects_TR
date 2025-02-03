@@ -2,81 +2,19 @@
 
 In this topic, we'll learn about the `.gitignore` file, what it is, and why it's important. We'll also learn how to use it to exclude files from version control.
 
-- [.gitignore](#gitignore)
-  - [Learing Outcomes](#learing-outcomes)
-  - [What is `.gitignore`?](#what-is-gitignore)
-  - [Why Should We Use `.gitignore`?](#why-should-we-use-gitignore)
-  - [How to Use `.gitignore`:](#how-to-use-gitignore)
-  - [Caveats:](#caveats)
-  - [.gitignore in context of Node.js](#gitignore-in-context-of-nodejs)
-    - [Explanation:](#explanation)
-    - [What to Put into `.gitignore`:](#what-to-put-into-gitignore)
-    - [What Not to Put into `.gitignore`:](#what-not-to-put-into-gitignore)
-  - [Excercises](#excercises)
+- [`.gitignore`](#gitignore)
+  - [.gitignore in the Context of Node.js](#gitignore-in-the-context-of-nodejs)
+    - [Explanation of the Previous Example](#explanation-of-the-previous-example)
+    - [What to Include in `.gitignore`](#what-to-include-in-gitignore)
+    - [What Not to Include in `.gitignore`](#what-not-to-include-in-gitignore)
+  - [Exercises](#exercises)
 
-## Learing Outcomes
+Briefly, a `.gitignore` file contains rules about the files and folders that Git should ignore, meaning they should not be added to version control, such as various secret or environment-specific files, temporary files, environment-specific files, and third-party dependencies.
 
-After completing this topic, you'll be able to:
+## .gitignore in the Context of Node.js
 
-- describe what `.gitignore` is and why it's important;
-- create a `.gitignore` file;
-- use `.gitignore` to exclude files from version control.
-
-## What is `.gitignore`?
-
-`.gitignore` is a special file used by Git to determine which files and directories to ignore when committing changes. It's a way to exclude unnecessary files from being tracked by version control, such as compiled code, logs, or environment-specific configurations.
-
-## Why Should We Use `.gitignore`?
-
-- **Clean Repository:** Keeps the repository clean by not including files that aren't necessary for the project to function.
-- **Reduce Clutter:** Reduces the clutter in commit histories by excluding files that change often but don't need to be versioned (e.g., logs).
-- **Improve Efficiency:** Reduces the size of the repository, which can make cloning, fetching, and pulling faster.
-- **Security:** Prevents accidentally committing sensitive information, such as passwords, API keys, or secrets.
-- **Consistency:** Ensures that all developers working on a project are not accidentally committing files that should be ignored.
-
-## How to Use `.gitignore`:
-
-1. **Create the File:** If it doesn't exist, create a file named `.gitignore` in the root directory of your repository.
-2. **Specify Patterns:** Each line in the `.gitignore` file specifies a pattern. For example:
-   - `*.log` ignores all files with a `.log` extension.
-   - `node_modules/` ignores the entire `node_modules` directory.
-   - `config.env` would ignore a file named `config.env`.
-3. **Comments:** You can include comments in `.gitignore` by starting a line with `#`.
-
-   ```
-   # This is a comment
-   *.tmp
-   ```
-4. **Negate Patterns:** If you want to track a file that matches one of your ignore patterns, you can negate the pattern by prefixing it with `!`.
-
-   ```
-   *.log
-   !important.log
-   ```
-
-   In this example, all `.log` files would be ignored, except for `important.log`.
-5. **Glob Patterns:** The `.gitignore` file supports glob patterns, which offer more flexibility in specifying which files to ignore:
-   - `**` matches multiple directory levels. For instance, `**/logs` matches any `logs` directory in the repo.
-   - `?` matches a single character.
-6. **Using Templates:** Many programming languages and frameworks have common patterns of files to ignore. There are templates available (like on [gitignore.io](https://www.gitignore.io/)) to get you started based on the type of project you're working on.
-7. **Checking Ignored Files:** If you want to see which files in your repository are being ignored because of the `.gitignore` patterns, you can use the command `git status --ignored`.
-8. **Commit `.gitignore`:** Don't forget to add and commit your `.gitignore` file to the repository so that other collaborators will have the same set of ignored files.
-9. **Global `.gitignore`:** If you have files that you want to ignore across all repositories on your system (e.g., editor backup files), you can set up a global `.gitignore` file. Use `git config --global core.excludesfile ~/.gitignore_global` and then add your patterns to the `~/.gitignore_global` file.
-
-## Caveats:
-
-- If a file was already tracked by Git before it was added to `.gitignore`, it won't be automatically ignored. You would need to manually untrack it using `git rm --cached <filename>`.
-- Make sure you thoroughly understand the patterns you're adding to `.gitignore` to avoid accidentally ignoring important files.
-
-In summary, the `.gitignore` file is an essential tool for maintaining a clean and efficient Git repository. It ensures that unwanted files are excluded from version control, providing both security and efficiency benefits.
-
-## .gitignore in context of Node.js
-
-Here is one example of a `.gitignore` file for a Node.js project:
-
-Certainly! Below is an example of a typical `.gitignore` file for Node.js projects:
-
-```plaintext
+Here is an example of a typical `.gitignore` file for Node.js projects:
+```
 # Logs
 logs/
 *.log
@@ -88,30 +26,30 @@ pids/
 *.seed
 *.log
 
-# Directory for instrumented libs generated by jscoverage/JSCover
+# Library folder for jscoverage/JSCover generated instrumented libraries
 lib-cov/
 
-# Coverage directory used by tools like istanbul
+# Coverage folder used by tools like istanbul
 coverage/
 
-# nyc test coverage
+# NYC test coverage
 .nyc_output/
 
-# Dependency directory
+# Dependency folder
 node_modules/
 
 # IDE - Integrated Development Environment settings
 .idea/
 .vscode/
 
-# Environment Variables (dotenv files)
+# Environment variables (dotenv files)
 .env
 .env.test
 
 # Mac files
 .DS_Store
 
-# Optional npm cache directory
+# Optional npm cache folder
 .npm
 
 # Optional eslint cache
@@ -121,21 +59,21 @@ node_modules/
 .node_repl_history
 ```
 
-### Explanation:
+### Explanation of the Previous Example
 
-- **Logs:** It's common to ignore log files and directories as they often contain runtime data that doesn't need to be versioned.
-- **Runtime Data:** Similarly, any generated PID or seed files should be excluded.
-- **Test Coverage Data:** Directories like `lib-cov`, `coverage`, and `.nyc_output` often store test coverage data and should be excluded.
-- **`node_modules/`:** This is a crucial one for Node.js projects. When you install third-party packages via npm or Yarn, they're stored in this directory. You should exclude `node_modules/` because:
-   - It can be large, making cloning and fetching slow.
-   - Dependencies can be installed on a per-environment basis. This ensures that when another developer or a CI/CD pipeline clones the repo, they can install the exact versions specified in your `package-lock.json` or `yarn.lock` by running `npm install` or `yarn`.
-- **IDE Settings:** Directories like `.idea/` (for JetBrains IDEs) and `.vscode/` (for Visual Studio Code) can contain user-specific IDE settings. They should be ignored to prevent overriding another developer's setup.
-- **Environment Variables:** Files like `.env` often contain sensitive or environment-specific values. They should be ignored to prevent leaking secrets and to allow different developers or environments to maintain their configurations.
-- **Mac-Specific:** `.DS_Store` is a system file generated by Mac OS.
-- **Cache Files:** `.npm` and `.eslintcache` are cache directories/files that don't need to be versioned.
-- **REPL History:** `.node_repl_history` is the history file when using the Node REPL.
+- **Logs:** Log files and directories are typically ignored because they often contain runtime data that does not need to be versioned.
+- **Runtime Data:** All generated PID or seed files should also be excluded.
+- **Test Coverage Data:** Directories such as `lib-cov`, `coverage`, and `.nyc_output` contain test coverage data and should be excluded.
+- **`node_modules/`:** This is an important folder for Node.js projects that does not need to be included in version control. When third-party packages are installed via `npm` or `yarn`, these packages are stored in this folder. This folder should be excluded because:
+  - it can be large, making cloning and pulling slow;
+  - dependencies can be installed environment-specifically. This ensures that when another developer or CI/CD (Continuous Integration/Continuous Delivery) clones the repository, the exact versions specified in `package-lock.json` or `yarn.lock` files are installed.
+- **IDE Settings:** Folders like `.idea/` (for JetBrains IDEs) and `.vscode/` (for Visual Studio Code) contain user-specific code editor settings. These should be ignored to avoid overwriting another developer's configuration.
+- **Environment Variables:** Files like `.env` often contain sensitive or environment-specific values. These should be ignored to prevent leakage of sensitive information and allow different developers or environments to maintain their specific configurations.
+- **Mac-specific:** `.DS_Store` is a system file generated by Mac OS that is not necessary for the application code.
+- **Cache Files:** `.npm` and `.eslintcache` are cache folders/files that do not need to be versioned.
+- **REPL History:** `.node_repl_history` is a history file when you use the Node REPL (command line environment).
 
-### What to Put into `.gitignore`:
+### What to Include in `.gitignore`
 
 - Generated and temporary files.
 - Environment-specific files.
@@ -144,22 +82,133 @@ node_modules/
 - Secrets and configuration files with environment-specific values.
 - OS-specific files (like `.DS_Store`).
 
-### What Not to Put into `.gitignore`:
+### What Not to Include in `.gitignore`
 
-- Project's source code and assets.
-- Configuration files that are necessary for the application to run and are shared across all instances of the project (except secrets).
+- Project source code and files that accompany the code.
+- Configuration files that are necessary for running the application and shared among all project instances (except secrets).
 - Documentation and related assets.
 - Build and deployment scripts.
-  
-Remember, the goal of the `.gitignore` file is to keep your repository clean by excluding files and directories that don't provide value in version control. It also helps in preventing accidental commits of sensitive data or user-specific settings.
 
-## Excercises
+Remember, the purpose of the `.gitignore` file is to keep your repository clean by excluding files and folders that do not offer value in version control. It also helps prevent unintentional versioning of sensitive data or user-specific settings.
 
-Try to explain in your own words what `.gitignore` is and why it's important.
+## Exercises
+
+Try to explain in your own words what a `.gitignore` is and why it is important.
 
 Next, try to complete the following tasks:
+
 - Create a `.gitignore` file in your repository.
-- Add `draft.md` to `.gitignore`.
+- Add `draft.md` to the `.gitignore` file.
 - Commit the `.gitignore` file to your repository.
 - Create a new file named `draft.md` and add some content to it.
-- Check if `draft.md` is being ignored by Git (try to commit it).
+- Check if `draft.md` is ignored by Git (try to commit it).
+
+
+# .gitignore
+
+Bu konuda, `.gitignore` dosyasını, ne olduğunu ve neden önemli olduğunu öğreneceğiz. Ayrıca, sürüm kontrolünden hariç tutmak için nasıl kullanılacağını da öğreneceğiz.
+
+- [.gitignore](#gitignore)
+  - [Node.js Bağlamında .gitignore](#gitignore-in-the-context-of-nodejs)
+    - [Önceki Örneğin Açıklaması](#explanation-of-the-previous-example)
+    - [.gitignore'a Neler Dahil Edilmeli](#what-to-include-in-gitignore)
+    - [.gitignore'a Neler Dahil Edilmemeli](#what-not-to-include-in-gitignore)
+  - [Alıştırmalar](#exercises)
+ 
+Kısaca, bir `.gitignore` dosyası, Git'in göz ardı etmesi gereken dosyalar ve klasörler hakkında kurallar içerir, yani sürüm kontrolüne dahil edilmemelidir. Bu dosyalar arasında çeşitli gizli veya çevresel dosyalar, geçici dosyalar, ortam-spesifik dosyalar ve üçüncü taraf bağımlılıkları bulunur.
+
+
+
+## Node.js Bağlamında .gitignore
+
+İşte bir Node.js projesi için tipik bir `.gitignore` dosyasının örneği:
+Here is an example of a typical `.gitignore` file for Node.js projects:
+```
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.log
+
+# Library folder for jscoverage/JSCover generated instrumented libraries
+lib-cov/
+
+# Coverage folder used by tools like istanbul
+coverage/
+
+# NYC test coverage
+.nyc_output/
+
+# Dependency folder
+node_modules/
+
+# IDE - Integrated Development Environment settings
+.idea/
+.vscode/
+
+# Environment variables (dotenv files)
+.env
+.env.test
+
+# Mac files
+.DS_Store
+
+# Optional npm cache folder
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+```
+
+### Önceki Örneğin Açıklaması
+
+- **Loglar:** Log dosyaları ve klasörleri genellikle sürüm kontrolüne dahil edilmez çünkü çoğunlukla sürümlemeye gerek olmayan çalışma verisi içerir.
+- **Çalışma Verisi:** Üretilen PID veya seed dosyaları da hariç tutulmalıdır.
+- **Test Kapsama Verisi:** `lib-cov`, `coverage` ve `.nyc_output` gibi klasörler test kapsamı verisi içerir ve hariç tutulmalıdır.
+- **`node_modules/`:** Node.js projeleri için önemli bir klasördür ve sürüm kontrolüne dahil edilmemelidir. Üçüncü taraf paketleri `npm` veya `yarn` ile yüklendiğinde bu klasöre kaydedilir. Bu klasörün hariç tutulmasının nedeni:
+  - Büyük olabilir, bu da klonlama ve çekme işlemlerini yavaşlatır;
+  - Bağımlılıklar ortam-spesifik olarak kurulabilir. Bu, başka bir geliştirici veya CI/CD (Sürekli Entegrasyon/Sürekli Teslimat) bir depoyu klonladığında, `package-lock.json` veya `yarn.lock` dosyalarında belirtilen tam sürümlerin yüklenmesini sağlar.
+- **IDE Ayarları:** `.idea/` (JetBrains IDE'leri için) ve `.vscode/` (Visual Studio Code için) gibi klasörler kullanıcıya özel kod editörü ayarları içerir. Başka bir geliştiricinin yapılandırmasını silmemek için bunlar hariç tutulmalıdır.
+- **Ortam Değişkenleri:** `.env` gibi dosyalar genellikle gizli veya ortam-spesifik değerler içerir. Bu dosyaların gizliliği korunmalı ve her geliştirici veya ortam kendi yapılandırmalarını sürdürmelidir.
+- **Mac-özel:** `.DS_Store`, Mac OS tarafından oluşturulan bir sistem dosyasıdır ve uygulama kodu için gerekli değildir.
+- **Önbellek Dosyaları:** `.npm` ve `.eslintcache` gibi önbellek klasörleri/sürekli veriler sürüm kontrolüne dahil edilmemelidir.
+- **REPL Geçmişi:** `.node_repl_history`, Node REPL (komut satırı ortamı) kullanıldığında bir geçmiş dosyasıdır.
+
+### .gitignore'a Neler Dahil Edilmeli
+
+- Üretilen ve geçici dosyalar.
+- Ortama özgü dosyalar.
+- Üçüncü taraf bağımlılıkları (örneğin `node_modules/`).
+- IDE ve editör yapılandırma dosyaları.
+- Gizli ve ortam-spesifik değerler içeren yapılandırma dosyaları.
+- OS-özel dosyalar (örneğin `.DS_Store`).
+
+### .gitignore'a Neler Dahil Edilmemeli
+
+- Proje kaynak kodu ve kodla ilgili dosyalar.
+- Uygulamanın çalışması için gerekli olan ve tüm proje örneklerinde paylaşılan yapılandırma dosyaları (gizli bilgiler hariç).
+- Dokümantasyon ve ilgili varlıklar.
+- Derleme ve dağıtım betikleri.
+
+Unutmayın, `.gitignore` dosyasının amacı, sürüm kontrolüne değer sunmayan dosyaları ve klasörleri hariç tutarak deponuzu temiz tutmaktır. Ayrıca, hassas verilerin veya kullanıcıya özel ayarların yanlışlıkla sürümlemeye dahil edilmesini engellemeye yardımcı olur.
+
+## Alıştırmalar
+
+Kendi kelimelerinizle `.gitignore` nedir ve neden önemlidir, açıklamaya çalışın.
+
+Sonraki adımlar:
+- Depo içerisinde bir `.gitignore` dosyası oluşturun.
+- `.gitignore` dosyasına `draft.md` dosyasını ekleyin.
+- `.gitignore` dosyasını deponuza commit edin.
+- `draft.md` adında yeni bir dosya oluşturun ve içine içerik ekleyin.
+- `draft.md` dosyasının Git tarafından göz ardı edilip edilmediğini kontrol edin (commit etmeyi deneyin).
+
+

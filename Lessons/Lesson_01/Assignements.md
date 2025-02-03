@@ -1,11 +1,36 @@
-# Assignements
+# Ders 1
 
-## Assignement 1
+## Bölüm 1
 
-> How much time should I spend on this assignement?
+- Giriş
+- Programlama Nedir?
+- Yazılım Geliştirme Nedir?
+- Araçlar
+- NodeJS
+- Değişkenler
+  - var
+  - let
+  - const
+- Veri Türleri
+  - İlkel Veri Türleri
+    - Sayı (Number)
+    - Dize (String)
+    - Null
+    - Tanımsız (Undefined)
+- Giriş/Çıkış
+  - Konsol
+- Hata Ayıklama
+  - Programdaki Hatalar
+  - Hata Ayıklama Araçları
+  - Hata Ayıklama Stratejileri
 
- # Ödevler
+## Bölüm 2
 
-## Ödev 1
-
-> Bu ödev için ne kadar zaman harcamalıyım?
+- Sürüm Kontrolü
+- Git
+  - Temeller
+  - Sözlük
+- Github
+- Github Desktop
+- Görevler
+- Geri Bildirim

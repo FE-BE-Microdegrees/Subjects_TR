@@ -160,3 +160,166 @@ function sayHello() {
   - 'Hello!' is a string
 
 </details>
+
+# Veri Türleri
+
+Bu konuda, Javascript'te veri türlerini öğreneceğiz.
+
+- [Veri Türleri](#veri-türleri)
+  - [Öğrenme Çıktıları](#öğrenme-çıktıları)
+  - [Veri Türü Nedir?](#veri-türü-nedir)
+  - [İlkel (Primitive) Veri Türleri](#ilkel-primitive-veri-türleri)
+  - [Nesne (Object) Veri Türleri](#nesne-object-veri-türleri)
+  - [Tür Dönüşümü](#tür-dönüşümü)
+  - [Tür Zorlama](#tür-zorlama)
+  - [Alıştırmalar](#alıştırmalar)
+    - [Alıştırma 1](#alıştırma-1)
+    - [Alıştırma 2](#alıştırma-2)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+- Veri türünün ne olduğunu tanımlamak
+- Javascript'teki ilkel veri türlerini listelemek
+- Javascript'teki nesne veri türlerini listelemek
+- Bir veri türünden diğerine dönüştürme işlemi yapmak
+- Tür dönüşümü ile tür zorlama arasındaki farkı açıklamak
+
+## Veri Türü Nedir?
+
+Bildiğimiz gibi, değişken bir bilgisayarın belleğinde `isimlendirilmiş bir depolama alanı`dır ve veri depolamak için kullanılabilir. Bir değişkende depolanabilecek verinin bir *türü* vardır. Verinin **türü**, üzerinde hangi işlemlerin yapılabileceğini belirler. Örneğin, iki **sayının** toplanması mümkündür, ancak bir **sayı** ile bir **string** toplamak mümkün değildir.
+
+Javascript dinamik olarak tür belirleyen bir dildir, yani bir değişkenin **türü**, bir programın yürütülmesi sırasında değiştirilebilir. Örneğin, bir değişkene bir **sayı** atayabilir ve daha sonra aynı değişkene bir **string** atayabiliriz. Bu durum, değişken türünün sabit olduğu (örneğin Java'da) dillerden farklıdır.
+
+Javascript'te veri türleri iki kategoriye ayrılabilir:
+- **İlkel (primitive) veri** türleri
+- **Nesne (object) veri** türleri.
+
+## İlkel (Primitive) Veri Türleri
+
+İlkel veri türleri, Javascript'teki en temel veri türleridir. Javascript'te 7 ilkel veri türü vardır:
+
+- **String**: tek veya çift tırnak içinde bir *karakter dizisi*
+- **Number**: bir *sayısal* değer
+- **Boolean**: ya *true* ya da *false* olan bir değer
+- **Undefined**: bir *değerin eksikliğini* temsil eden değer (örneğin, bir değişken tanımlandığında ancak bir değer atanmadığında)
+- **Null**: *hiçbir şeyi* temsil eden bir değer (genellikle *undefined* değerinden farkı, *null*'ın kasıtlı olarak atanmış bir değer olmasıdır)
+- **Symbol**: nesne özelliklerini tanımlamak için kullanılan *benzersiz* bir değer (bu türü bu derste kullanmayacağız)
+- **BigInt**: *Number.MAX_SAFE_INTEGER*'dan daha büyük bir sayısal değer (bu türü bu derste kullanmayacağız)
+
+```javascript
+let firstName = 'John'; // string
+let age = 25; // number
+let isMarried = false; // boolean
+let x; // undefined
+let car = null; // null
+let symbol = Symbol('symbol'); // symbol
+let bigInt = 1234567890123456789012345678901234567890n; // bigint
+```
+
+## Nesne (Object) Veri Türleri
+
+Nesne veri türleri, daha karmaşık veri yapılarını saklamak için kullanılabilecek veri türleridir. Javascript'te 3 nesne veri türü vardır:
+
+- **Object**: anahtar: değer çiftlerinin bir koleksiyonu. Nesneler, daha karmaşık bir yapıya sahip verileri tanımlamak için kullanılabilir. Burada değer, ilkel bir veri türü, bir dizi veya başka bir nesne olabilir. Anahtar, nesnenin bir özelliğini tanımlayan bir string'dir ve ardından bir iki nokta üst üste ile özelliğin değeri gelir.
+- **Array**: bir değerler koleksiyonu. Bir dizi, bir değişkende birden fazla değeri saklamayı sağlar. Bir dizi, ilkel veri türleri, diziler ve nesneler dahil olmak üzere farklı veri türlerini içerebilir.
+- **Function**: çağrıldığında yürütülebilen bir *kod bloğu*
+
+```javascript
+let person = { // object
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 25,
+  isMarried: false
+};
+
+let fruits = ['apple', 'banana', 'orange']; // array
+
+function sayHello() { // function
+  console.log('Hello!');
+}
+```
+
+## Tür Dönüşümü
+
+Tür dönüşümü, bir değeri bir veri türünden diğerine dönüştürme işlemidir. Javascript'te, aşağıdaki yöntemlerle tür dönüşümü yapılabilir:
+
+- **String()**: bir değeri string'e dönüştürür
+- **Number()**: bir değeri sayıya dönüştürür
+- **Boolean()**: bir değeri boolean'a dönüştürür
+
+```javascript
+let x = 5; // number
+let y = String(x); // string - y'nin değeri '5'
+let z = Boolean(x); // boolean - z'nin değeri true
+```
+
+## Tür Zorlama
+
+Tür zorlama, bir değerin bir veri türünden diğerine örtük olarak dönüştürülmesidir. Bu, tür zorlama işlemini bizim yapmamıza gerek kalmadan otomatik olarak gerçekleşir. Javascript'te tür zorlama, farklı veri türlerinden operandlarla bir operatör kullanıldığında meydana gelir. Örneğin, + operatörü iki sayıyı toplamak için kullanılabilir, ancak aynı zamanda iki string'i birleştirmek için de kullanılabilir.
+
+```javascript
+let x = 5; // number
+let y = '5'; // string
+let z = x + y; // string - z'nin değeri '55'
+```
+
+## Alıştırmalar
+
+### Alıştırma 1
+
+Aşağıdaki değişkenlerin veri türü nedir?
+
+```javascript
+let firstName = 'John';
+let age = 25;
+let isMarried = false;
+let x;
+let car = null;
+```
+
+<details>
+<summary>Çözüm</summary>
+
+- `firstName` bir string
+- `age` bir number
+- `isMarried` bir boolean
+- `x` undefined
+- `car` null
+
+</details>
+
+### Alıştırma 2
+
+Aşağıdaki değişkenlerin veri türü nedir?
+
+```javascript
+let person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 25,
+  isMarried: false
+};
+
+let fruits = ['apple', 'banana', 'orange'];
+
+function sayHello() {
+  console.log('Hello!');
+}
+```
+
+<details>
+<summary>Çözüm</summary>
+
+- `person` bir object
+  - `firstName`, `lastName`, `age` ve `isMarried` `person` nesnesinin özellikleridir
+  - `firstName`, `lastName` string
+  - `age` number
+  - `isMarried` boolean
+- `fruits` bir array
+  - `apple`, `banana` ve `orange` `fruits` dizisinin elemanlarıdır
+  - `apple`, `banana`, `orange` string
+- `sayHello` bir function
+  - 'Hello!' bir string
+
+</details>

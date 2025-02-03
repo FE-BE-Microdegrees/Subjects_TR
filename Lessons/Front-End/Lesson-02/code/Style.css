@@ -1,0 +1,11 @@
+.container {
+  display: flex; /* makes the .container a flex container */
+  border: 1px solid black;
+/*   margin: auto;  */
+}
+
+.item {
+  flex: 1; /*  element inside .container takes up an equal amount of space.*/
+  border: 1px solid black;
+  margin: 10px;
+}

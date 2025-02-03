@@ -63,3 +63,70 @@ There are lot of different tools for project management. Some of them are:
 - Create a `Board` with `To do`, `In progress` and `Done` columns
 - Add some tasks according to the topics in this course to the `To do` column
 - Add labels according to the subject of the task
+
+
+# Yazılım Geliştirmede Proje Yönetimi
+
+- [Yazılım Geliştirmede Proje Yönetimi](#yazılım-geliştirmede-proje-yönetimi)
+  - [Öğrenme Sonuçları](#öğrenme-sonuçları)
+  - [Yazılım Geliştirmede Proje Yönetiminin Önemi:](#yazılım-geliştirmede-proje-yönetiminin-önemi)
+  - [Yazılım Geliştirmede Proje Yönetiminin Anahtar Öğeleri:](#yazılım-geliştirmede-proje-yönetiminin-anahtar-öğeleri)
+  - [Araçlar](#araçlar)
+  - [Egzersizler](#egzersizler)
+
+## Öğrenme Sonuçları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+
+- Yazılım geliştirmede proje yönetiminin önemini anlamak;
+- Proje yönetiminin anahtar öğelerini tanımlamak;
+- Proje yönetimi için kullanılan çeşitli araçları açıklamak;
+- Yazılım geliştirmeye proje yönetimi ilkelerini uygulamak.
+
+Yazılım geliştirme bağlamında proje yönetimi, belirli yazılım çıktıları elde etmek için görevlerin ve kaynakların planlanması, organize edilmesi ve yönlendirilmesi sürecini kapsar. Genellikle zaman, kapsam ve bütçe ile ilgili sınırlamalar içinde gerçekleştirilir. Bu süreç, gereksinimlerin tanımlanmasından, hedeflerin belirlenmesine, ilerlemenin izlenmesinden gerekli düzeltmelerin yapılmasına kadar bir dizi etkinliği içerir.
+
+İşte proje yönetiminin önemi ve ana öğelerinin bir özeti:
+
+## Yazılım Geliştirmede Proje Yönetiminin Önemi:
+
+- **Açık Hedefler ve Amaçlar:** Proje yönetimi, ne yapılması gerektiğini, ne zaman ve kim tarafından yapılması gerektiğini açıkça belirler. Herkesin ortak bir hedef doğrultusunda hizalanmasını sağlar.
+- **Kaynak Tahsisi:** Mevcut kaynakların verimli bir şekilde nasıl tahsis edileceğini belirlemeye yardımcı olur, böylece ekip üyeleri en verimli şekilde kullanılır ve donanım ve yazılım kaynakları etkili bir şekilde tahsis edilir.
+- **Risk Yönetimi:** Olası zorluklar ve riskler önceden tahmin edilerek, proje yöneticileri bunları hafifletmek için stratejiler geliştirir, böylece proje sapma yaşamaz.
+- **Kalite Güvencesi:** Proje yönetimi, kalite kontrol, incelemeler ve test süreçleriyle kaliteli ürünler sunmayı vurgular.
+- **Zaman Yönetimi:** Belirlenen son tarihler ve kilometre taşları ile ekipler, projeyi zamanında teslim edebilmek için yolunda kalır.
+- **Bütçe Uyumu:** Projelerin ayrılan bütçe içinde kalmasını sağlar, harcamaları takip eder ve maliyet aşımını engeller.
+- **Paydaş İletişimi:** Düzenli güncellemeler ve geri bildirim döngüleri, paydaşların (müşteriler ve üst yönetim dahil) bilgilenmesini ve karar verme süreçlerine dahil edilmesini sağlar.
+- **Kapsam Yönetimi:** Proje başladıktan sonra kapsam genişlemesini (scope creep) önlemeye yardımcı olur, kapsam değişikliklerinin belgelenmesini, değerlendirilmesini ve onaylanmasını sağlar.
+- **İşbirliği ve Takım Çalışması:** Takım üyelerinin ortak hedeflere ulaşmak için etkili bir şekilde işbirliği yapmalarını sağlamak için araçlar ve metodolojiler sunar.
+- **Kapanış ve Yansıma:** Proje tamamlandığında, proje yönetimi, geri bildirim ve gelecekteki projeler için öğrenilen derslerin toplandığı yapılandırılmış bir kapanış ve yansıma aşaması sağlar.
+
+## Yazılım Geliştirmede Proje Yönetiminin Anahtar Öğeleri:
+
+- **Başlatma:** Projeyi tanımlama, uygulanabilirliğini belirleme ve başlamak için gerekli onayları alma.
+- **Planlama:** Proje için yol haritası oluşturma, görevler, zaman çizelgeleri, kaynaklar, bütçe ve potansiyel riskler hakkında detaylı bir planlama.
+- **Uygulama:** Gerçek işin başladığı aşama. Ekipler, belirlenen gereksinimlere ve planlara göre yazılımı inşa etmeye başlar.
+- **İzleme ve Kontrol:** Projeyi planla karşılaştırarak düzenli olarak izlemek, işler yolundan saparsa gerekli ayarlamaları yapmak.
+- **Kapanış:** Proje faaliyetlerini tamamlamak, teslim edilebilirleri teslim almak ve proje sonrası incelemeler yapmak.
+- **Paydaş Yönetimi:** Projeye ilgi duyan bireyleri veya grupları tanımlamak ve yönetmek.
+- **İletişim Yönetimi:** Tüm taraflar arasında zamanında ve etkili iletişim sağlamak.
+- **Kalite Yönetimi:** Projeye yönelik kalite standartlarını belirlemek ve sürdürmek.
+- **Risk Yönetimi:** Potansiyel riskleri belirlemek ve bunları hafifletmek veya yönetmek için planlar yapmak.
+- **Tedarik Yönetimi:** Proje için gerekli sözleşmeleri ve satın alımları yönetmek.
+
+Özetle, proje yönetimi yazılım geliştirme süreçlerinde kritik öneme sahiptir çünkü karmaşıklığı yönetmek için yapılandırılmış bir yaklaşım sağlar. Yazılım projeleri, doğaları gereği çok yönlü ve karmaşık olabilir, birçok hareketli parça ve paydaş içerir. Doğru proje yönetimi, bu projelerin zamanında, kapsam dahilinde ve bütçeyle tamamlanmasını, aynı zamanda istenen kalite standartlarını karşılamasını sağlar.
+
+## Araçlar
+
+Proje yönetimi için pek çok farklı araç bulunmaktadır. Bunlardan bazıları şunlardır:
+
+- [Trello](https://trello.com/)
+- [Jira](https://www.atlassian.com/software/jira)
+- [Asana](https://asana.com/)
+- [Github Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+
+## Egzersizler
+
+- `Github Projects` üzerinde bir proje oluşturun
+- `To do`, `In progress` ve `Done` başlıklarında bir `Board` oluşturun
+- Bu kursun konularına göre `To do` sütununa bazı görevler ekleyin
+- Görevlerin konusuna göre etiketler ekleyin

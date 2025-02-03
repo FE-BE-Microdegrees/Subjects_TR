@@ -69,3 +69,73 @@ Of course! Here's the information restructured with each role as a second-level 
 - **Skills:** Machine learning, statistics, proficiency in data processing languages/tools.
 
 These roles can often overlap, especially in smaller teams or startups. In larger organizations, there may be more specialization, and additional roles might emerge based on the project's complexity and scale.
+
+# Yazılım Geliştirme Roller
+
+- [Yazılım Geliştirme Roller](#yazılım-geliştirme-rolleri)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+
+- Yazılım geliştirme sürecindeki farklı rollerin ne olduğunu anlayabileceksiniz;
+- Farklı rollerin gerektirdiği sorumlulukları ve becerileri tanımlayabileceksiniz;
+- Farklı roller arasındaki ilişkiyi açıklayabileceksiniz.
+
+Yazılım geliştirme alanında, her biri genel projeye katkıda bulunan farklı sorumluluklara sahip pek çok rol bulunmaktadır. İşte yazılım geliştirme süreçlerindeki bazı önemli rollerin genel bir özeti:
+
+Tabii! İşte her rolün ikinci dereceden başlık olarak yapılandırılmış bilgisi:
+
+## Yazılım Geliştiricisi/Mühendisi
+- **Sorumluluklar:** Kod yazmak, hata ayıklamak, tasarım spesifikasyonlarına göre işlevsellik uygulamak.
+- **Beceriler:** Programlama dillerinde yetkinlik, problem çözme, algoritmalar ve veri yapıları hakkında bilgi.
+
+## Çözüm Mimarisi
+- **Sorumluluklar:** Yazılımın genel yapısını tanımlamak ve mimari bütünlüğü sağlamak.
+- **Beceriler:** Teknoloji yığınları, mimari desenler ve tasarım ilkeleri hakkında derin bilgi.
+
+## QA Mühendisi/Test Mühendisi
+- **Sorumluluklar:** Yazılım kalitesini test ederek sağlamak. Hataları ve sorunları tespit etmek.
+- **Beceriler:** Test otomasyonu, manuel test metodolojileri, yazılım yaşam döngüsü hakkında bilgi.
+
+## Ürün Yöneticisi
+- **Sorumluluklar:** Ürünün yönünü ve kapsamını tanımlamak. Pazar ve müşteri ihtiyaçlarına göre özellikleri önceliklendirmek.
+- **Beceriler:** Pazar analizi, müşteri etkileşimi, paydaşlarla iletişim, stratejik planlama.
+
+## Proje Yöneticisi
+- **Sorumluluklar:** Projeyi başlatmadan tamamlanmaya kadar yönetmek. Zaman çizelgelerini, kaynakları ve riskleri yönetmek.
+- **Beceriler:** Proje planlaması, risk yönetimi, paydaşlarla iletişim, bütçeleme.
+
+## İş Analisti
+- **Sorumluluklar:** Paydaşlar ile geliştirme ekibi arasında köprü kurmak. İş ihtiyaçlarını teknik gereksinimlere çevirmek.
+- **Beceriler:** Gereksinim toplama, paydaşlarla iletişim, iş ve teknoloji alanlarını anlama.
+
+## UI/UX Tasarımcısı
+- **Sorumluluklar:** Kullanıcı arayüzü ve kullanıcı deneyimi tasarlamak. Yazılımın sezgisel ve görsel olarak çekici olmasını sağlamak.
+- **Beceriler:** Grafik tasarım, kullanıcı deneyimi araştırması, prototip araçları.
+
+## Sistem Yöneticisi/DevOps Mühendisi
+- **Sorumluluklar:** Altyapıyı, dağıtımı, sürekli entegrasyonu ve sürekli teslimatı yönetmek.
+- **Beceriler:** Bulut platformları, kod olarak altyapı, CI/CD araçları hakkında bilgi.
+
+## Veritabanı Yöneticisi
+- **Sorumluluklar:** Veritabanını tasarlamak, uygulamak ve yönetmek. Veri bütünlüğünü ve erişilebilirliğini sağlamak.
+- **Beceriler:** SQL, veritabanı mimarileri, yedekleme ve kurtarma stratejileri.
+
+## Teknik Yazar
+- **Sorumluluklar:** Yazılımın nasıl çalıştığını açıklayan belgeler hazırlamak.
+- **Beceriler:** Yazma, yazılım ve teknoloji hakkında bilgi, karmaşık konuları basit terimlerle açıklama yeteneği.
+
+## Scrum Master (Çevik ekiplerde)
+- **Sorumluluklar:** Çevik törenleri kolaylaştırmak, engelleri ortadan kaldırmak, ekibi Scrum uygulamaları konusunda yönlendirmek.
+- **Beceriler:** Çevik metodolojileri anlama, ekip kolaylaştırma, çatışma çözümü.
+
+## Güvenlik Analisti/Mühendisi
+- **Sorumluluklar:** Yazılım ve altyapının güvenlik açıklarına ve saldırılara karşı korunmasını sağlamak.
+- **Beceriler:** Güvenlik protokollerinin bilgisi, penetrasyon testi, risk değerlendirmesi.
+
+## Veri Bilimci (Bazı projelerde)
+- **Sorumluluklar:** Verilerden içgörüler elde etmek, tahminsel modeller oluşturmak.
+- **Beceriler:** Makine öğrenimi, istatistik, veri işleme dilleri/araçları konusunda yetkinlik.
+
+Bu roller genellikle küçük ekiplerde veya başlangıç aşamasındaki projelerde örtüşebilir. Daha büyük organizasyonlarda ise daha fazla uzmanlaşma olabilir ve projenin karmaşıklığına ve ölçeğine göre ek roller ortaya çıkabilir.

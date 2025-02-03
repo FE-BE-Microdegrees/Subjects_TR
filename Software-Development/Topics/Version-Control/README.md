@@ -157,3 +157,141 @@ In summary, while both CVCS and DVCS have their own strengths and weaknesses, th
 - Provide examples from everyday life that illustrate version control.
 - Describe in your own words the difference between centralized and distributed version control systems.
 - Consider some advantages and disadvantages you might experience using centralized and distributed version control systems.
+
+  # Sürüm Kontrolü
+
+- [Sürüm Kontrolü](#sürüm-kontrolü)
+  - [Öğrenme Çıktıları](#öğrenme-çıktıları)
+  - [Sürüm Kontrolü Nedir?](#sürüm-kontrolü-nedir)
+  - [Sürüm Kontrolü Neden Önemlidir?](#sürüm-kontrolü-neden-önemlidir)
+  - [Sürüm Kontrolünün Kısa Tarihi](#sürüm-kontrolünün-kısa-tarihi)
+  - [Merkezi ve Dağıtık Sürüm Kontrol Sistemleri](#merkezi-ve-dağıtık-sürüm-kontrol-sistemleri)
+    - [Merkezi Sürüm Kontrol Sistemleri (CVCS):](#merkezi-sürüm-kontrol-sistemleri-cvcs)
+    - [Dağıtık Sürüm Kontrol Sistemleri (DVCS):](#dağıtık-sürüm-kontrol-sistemleri-dvcs)
+    - [Karşılaştırma:](#karşılaştırma)
+  - [Alıştırmalar ve Ödevler](#alıştırmalar-ve-ödevler)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra şunları yapabileceksiniz:
+
+- Sürüm kontrolünün ne olduğunu ve neden önemli olduğunu açıklayabileceksiniz;
+- Farklı sürüm kontrolü sistemlerini açıklayabileceksiniz;
+- Merkezi ve dağıtık sürüm kontrol sistemlerini karşılaştırabileceksiniz;
+
+## Sürüm Kontrolü Nedir?
+
+Bir belge üzerinde yalnızca tek başına yazmak ve değişiklikler yapmak, ne zaman ve hangi değişikliklerin yapıldığını takip etmeyi gerektirmeyebilir. Ancak, aynı belge üzerinde başkalarının da değişiklikler yapması gerekiyorsa, bu durum çok önemli olabilir. Özellikle belge sürekli olarak birçok kişi tarafından değiştirilip geri gönderiliyorsa, **en son sürümün ne olduğunu nasıl bilebiliriz?** **Son değişikliği kim yaptı?** **Ne değiştirildiğini nasıl bilebiliriz?** Uygulamalar genellikle birçok dosya içerir ve bu dosyalara yapılan değişiklikler çok karmaşık olabilir. Bu dosyaların değişikliklerini ve geçmişini takip etmek, yazılımın kalitesinin ve kararlılığının sağlanmasında önemli bir rol oynar.
+
+Bugün sürüm kontrolü, yazılım geliştirme sürecinin vazgeçilmez bir parçası haline gelmiştir. Geliştiriciler, projelerde işbirliği yapmak, değişiklikleri takip etmek ve yapılan çalışmaların geçmişini korumak için sürüm kontrolünü kullanmaktadırlar. Aynı zamanda şirketler, kod tabanlarını yönetmek ve değişikliklerin kontrollü ve güvenli bir şekilde yapılmasını sağlamak için de sürüm kontrolü kullanmaktadırlar.
+
+## Sürüm Kontrolü Neden Önemlidir?
+
+Sürüm kontrolü bir dizi nedenle önemlidir:
+
+- **Geçmiş ve Denetim Kaydı**: Sürüm kontrolü, koda yapılan değişikliklerin ayrıntılı bir geçmişini sağlar. Bu, kodun nasıl geliştiğini anlamaya, belirli bir değişikliğin ne zaman yapıldığını ve kim tarafından yapıldığını tespit etmeye yardımcı olur.
+- **İşbirliği**: Birden fazla geliştirici aynı proje üzerinde aynı anda çalışabilir, böylece birbirlerinin üzerinde çalışmasının önüne geçilir. Farklı geliştiriciler ayrı ayrı özellikler veya hata düzeltmeleri üzerinde çalışabilir ve sonra yaptıkları değişiklikleri ana kod tabanına sorunsuz bir şekilde birleştirebilir.
+- **Geri Alma**: Hatalar olabilir. Sürüm kontrolü sayesinde, yeni bir değişiklik bir hata veya sorun oluşturursa, geliştiriciler eski bir koda kolayca geri dönebilir, sorunlu değişikliği "geri alabilirler."
+- **Dal Yapma ve Birleştirme**: Geliştiriciler, yeni özellikler, hata düzeltmeleri veya denemeler üzerinde ana veya stabil yazılım sürümüne zarar vermeden çalışmak için dallar oluşturabilirler. Değişiklikler hazır olduğunda, bu dallar ana dal ile birleştirilebilir.
+- **Yedekleme**: Yedekleme sistemine tam bir alternatif olmasa da, sürüm kontrol sistemleri ek bir yedekleme katmanı olarak işlev görebilir. Bir geliştiricinin bilgisayarına bir şey olursa, kod sürüm kontrolü deposundan kolayca geri alınabilir.
+- **Dokümantasyon**: Sürüm kontrolündeki commit mesajları, kronolojik bir dokümantasyon izi sağlar. Bu mesajlar, belirli bir zamanda neden belirli kararların alındığını hakkında bağlam verebilir.
+- **Kod İncelemesi**: Sürüm kontrolü sistemleri, özellikle *GitHub* veya *GitLab* gibi platformlarla birleştirildiğinde, kod incelemelerini kolaylaştırır. Diğer geliştiriciler, kodu gözden geçirebilir, yorum yapabilir ve değişiklikleri önererek kodun birleştirilmeden önce gözden geçirilmesini sağlar.
+- **Sürüm Yönetimi**: Sürüm kontrolü, sürümleri ve yama güncellemelerini yönetmeye yardımcı olur. Geliştiriciler, kod geçmişlerindeki belirli noktaları ürünün belirli sürümleri olarak etiketleyebilirler. Bu, güncellemeleri ve yamaları takip etmeyi kolaylaştırır.
+- **Hesap Verebilirlik**: Yapılan her değişikliğin kim tarafından ve ne zaman yapıldığını gösteren bir log ile hesap verebilirlik sağlanır. Bu, özellikle ekiplerde katkıları anlamak ve kod değişikliklerinin belirli bireylere izlenebilmesini sağlamak için kullanışlıdır.
+- **Paralel Geliştirme**: Sürüm kontrol sistemleri, yazılım uygulamalarının birden çok sürümünün paralel olarak geliştirilebilmesine olanak tanır.
+
+Özetle, sürüm kontrolü modern yazılım geliştirme uygulamalarının temel taşlarından biridir. Daha sorunsuz bir işbirliği sağlar, hatalar için güvenlik ağları sunar ve yazılım projelerinin zaman içinde nasıl evrildiğine dair açık ve denetlenebilir bir kayıt tutar. İster tek başına bir geliştirici olun ister büyük bir ekipte yer alın, sürüm kontrolü kullanmak bugün için olmazsa olmazdır.
+
+## Sürüm Kontrolünün Kısa Tarihi
+
+Sürüm kontrolü, yıllar içinde basit manuel yöntemlerden gelişmiş dağıtık sistemlere kadar evrilmiştir. İşte sürüm kontrolünün kısa bir tarihi:
+
+1. **Manuel Sürüm Kontrolü (1970’lerden Önce)**:
+   - Gerçek sürüm kontrol sistemlerinden önce, geliştiriciler kodlarını çoğaltır ve farklı dizinlerde saklar, genellikle tarihleri veya sürüm numaralarıyla etiketlerdi.
+   - Bu yöntem hataya açıktı, ölçeklenebilir değildi ve işbirliğini zorlaştırıyordu.
+
+2. **Merkezi Sürüm Kontrol Sistemleri (CVCS, 1970’ler-1990’lar)**:
+   - CVCS’nin temel fikri, tüm değişikliklerin izlendiği tek bir merkezi depo kullanmaktır.
+   - **RCS (Revision Control System)**: 1970'lerin sonlarına doğru ortaya çıkan RCS, bireysel dosyaların revizyonlarını yönetip izlemek için ilk araçlardan biriydi. Sadece en son sürümü ve sürümler arasındaki farkları saklıyordu.
+   - **SCCS (Source Code Control System)**: RCS ile paralel olarak geliştirilen başka bir erken sistemdi, ancak bazı farklı özelliklere sahipti.
+   - **CVS (Concurrent Versions System)**: 1980'lerde gelişen CVS, RCS’ten daha fazla gelişmişti ve birden fazla geliştiricinin aynı projede eş zamanlı çalışabilmesine olanak sağlıyordu.
+   - **Perforce**: 1990’larda büyük organizasyonlarda popüler hale gelen, tescilli bir yazılımdı.
+   - **Subversion (SVN)**: 2000 yılında CVS’e kıyasla daha iyi bir sürüm kontrolü sağlayacak şekilde geliştirilmişti ve daha iyi dal yönetimi, atomik commitler ve daha tutarlı bir veri modeli sunuyordu.
+
+3. **Dağıtık Sürüm Kontrol Sistemleri (DVCS, 2000’ler-Günümüz)**:
+   - DVCS’te, her geliştirici kendi yerel kopyasını alır, yalnızca çalışma dosyaları değil, tüm depo geçmişi de kopyalanır.
+   - **BitKeeper**: 2000’lerin başlarında BitKeeper, ilk dağıtık sürüm kontrol sistemlerinden biriydi. Tescilli olmasına rağmen, Linux çekirdek geliştiricileri tarafından bir süre kullanıldı.
+   - **Git**: 2005’te Linus Torvalds tarafından geliştirilen Git, Linux geliştirme topluluğunun BitKeeper ile olan ilişkisini koparmasından sonra ücretsiz ve açık kaynaklı bir DVCS olarak yaratıldı. Git, hız, veri bütünlüğü ve dağıtık, doğrusal olmayan iş akışlarını desteklemeye öncelik vermektedir.
+   - **Mercurial**: 2005’te Git ile paralel olarak, Mercurial da açık kaynaklı bir DVCS olarak ortaya çıkmıştır. Kullanıcılar tarafından genellikle sadeliği ve kullanım kolaylığı ile övülür.
+   - **Bazaar**: Canonical tarafından geliştirilen Bazaar, hem merkezi hem de dağıtık sürüm kontrolünü destekleyen esnek bir yapıya sahipti.
+   - **Fossil**: Hem DVCS hem de hata izleme ve bir wiki içeren, tümleşik bir yazılımdı.
+
+4. **Modern Dönem (2010’lar-Günümüz)**:
+   - **GitHub, GitLab ve Bitbucket** gibi platformlar, sürüm kontrolünün işbirliği yönlerini geliştirmiştir ve Pull Request, Kod İncelemesi, Sürekli Entegrasyon ve sosyal kodlama gibi özellikler sunmaktadır.
+   - Bu platformların yükselmesi, Git’in GitHub ve GitLab gibi platformlarla entegrasyonu sayesinde çok daha yaygın hale gelmesini sağlamıştır.
+
+Bu, sürüm kontrolünün kısa bir özetidir. Sürüm kontrolünün tarihi, yazılım geliştirme topluluğunun işbirliğini optimize etme, veri bütünlüğünü sağlama ve iş akışlarını kolaylaştırma yönündeki sürekli çabalarını gösteren bir örnektir.
+
+## Merkezi vs. Dağıtık Sürüm Kontrol Sistemleri
+
+Şimdi, Merkezi ve Dağıtık Sürüm Kontrol Sistemlerinin genel bir incelemesine ve karşılaştırmasına geçelim:
+
+### Merkezi Sürüm Kontrol Sistemleri (CVCS):
+
+**Genel Bakış**:
+1. **Tek Depo**: CVCS’te tüm değişikliklerin izlendiği merkezi bir depo vardır.
+2. **Çalışma Kopyası**: Geliştiriciler sadece en son sürümün kopyasını alır, tüm sürüm geçmişiyle birlikte değil.
+3. **Merkezi Yetki**: Dal yapma ve birleştirme işlemleri merkezi depo üzerinde yapılır.
+4. **Örnekler**: Subversion (SVN), Concurrent Versions System (CVS), Perforce.
+
+**Avantajlar**:
+1. **Yönetimsel Kontrol**: Erişim kontrolleri ve izinlerin uygulanması daha kolaydır.
+2. **Doğrusal Geçmiş**: Doğrusal değişim geçmişini tutmak daha basittir.
+3. **Kolay Kurulum**: Genellikle DVCS'den daha kolay kurulabilir ve yapılandırılabilir.
+4. **Merkezi Yedekleme**: Merkezi sunucu yedeklenebilir ve veri kaybı engellenebilir.
+
+**Dezavantajlar**:
+1. **Tek Noktada Hata Riski**: Merkezi sunucu çökerse ve yedekleme yoksa, kod geçmişi kaybolabilir.
+2. **Ağ Bağımlılığı**: Çoğu işlem için merkezi depoya bağlantı gerekir, bu da iş akışlarını yavaşlatabilir.
+3. **Birleştirme Çatışmaları**: Herkesin merkezi depoya commit yapması gerektiğinden, özellikle büyük ekiplerde birleştirme çatışmaları daha sık olabilir.
+
+### Dağıtık Sürüm Kontrol Sistemleri (DVCS):
+
+**Genel Bakış**:
+1. **Birden Fazla Depo**: Her geliştiricinin kendi yerel deposu ve bu depolar tam kod geçmişini içerir.
+2. **Tam Sürüm Geçmişi**: Geliştiriciler yalnızca en son sürümü değil, tam depo geçmişini klonlarlar.
+3. **Eşler Arası**: Dal yapma ve birleştirme işlemleri yerel olarak yapılabilir. Commitler yerel depoya yapılır, daha sonra merkezi veya uzak depoya senkronize edilir.
+4. **Örnekler**: Git, Mercurial, Bazaar, Fossil.
+
+**Avantajlar**:
+1. **Hızlı İşlemler**: Çoğu işlem (commit, dal yapma, birleştirme) yerel olarak yapıldığından daha hızlıdır ve ağ bağlantısı gerektirmez.
+2. **Yedekleme Redundansı**: Her klon bir tam yedek olarak işlev görür, bu da veri kaybı riskini azaltır.
+3. **Esnek İş Akışları**: Geliştiriciler, merkezi koda zarar vermeden sıklıkla commit yapabilirler, böylece daha esnek iş akışları sağlanır.
+4. **Dal Yönetimi**: Dal yapma ve birleştirme genellikle daha gelişmiştir ve daha kolaydır.
+5. **İşbirliği Teşviki**: GitHub ve GitLab gibi platformlarda, formlar ve pull request özellikleri sayesinde işbirlikçi kodlama teşvik edilir.
+
+**Dezavantajlar**:
+1. **Karmaşıklık**: DVCS’in esnekliği ve gücü bazen karmaşıklık getirebilir, özellikle bu konsepte yeni olanlar için.
+2. **Büyük Depolar**: Tüm sürüm geçmişini saklamak, depo çok büyükse sorun yaratabilir.
+
+### Karşılaştırma:
+
+| Özellik/Özellikler        | Merkezi Sürüm Kontrolü (CVCS) | Dağıtık Sürüm Kontrolü (DVCS) |
+|---------------------------|-------------------------------|------------------------------|
+| **Depo Yapısı**           | Tek merkezi depo              | Her geliştiricinin tam yerel deposu |
+| **Ağ Bağımlılığı**        | Çoğu işlem için ağ gereklidir | Çoğu işlem yerel olarak yapılabilir |
+| **Veri Redundansı**       | Merkezi yedekleme             | Her klon tam bir yedek olarak işlev görür |
+| **Öğrenme Eğrisi**        | Genellikle daha basittir     | Daha karmaşık olabilir, ancak daha fazla özellik sunar |
+| **Ölçeklenebilirlik**     | Küçük ekipler için daha uygundur | Büyük projeler ve ekipler için uygundur |
+| **Sürüm Geçmişi**         | Çalışma kopyasında yalnızca en son sürüm | Çalışma kopyasında tam sürüm geçmişi |
+| **Performans**            | Ağ bağımlılığı nedeniyle daha yavaş | Yerel işlemler genellikle daha hızlı |
+| **Yedekleme ve Kurtarma** | Tek bir hata noktası          | Yedekleme riski daha düşüktür, her klon bir yedek sağlar |
+| **İşbirliği**             | Doğrusal, merkezi işbirliği   | Esnek, eşler arası işbirliği |
+
+Özetle, her iki sistemin de avantajları ve dezavantajları vardır. Seçim, projenin gereksinimlerine, ekip boyutuna ve tercih edilen iş akışına göre değişir. Ancak, Git gibi DVCS’lerin, GitHub ve GitLab gibi platformlarla entegrasyonları sayesinde günümüzde daha yaygın hale geldiğini unutmamak önemlidir.
+
+## Alıştırmalar ve Ödevler
+- Günlük hayattan sürüm kontrolü ile ilgili örnekler verin.
+- Merkezi ve dağıtık sürüm kontrol sistemlerinin farklarını kendi kelimelerinizle açıklayın.
+- Merkezi ve dağıtık sürüm kontrol sistemlerini kullanırken yaşanabilecek bazı avantajları ve dezavantajları düşünün.
+

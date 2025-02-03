@@ -63,3 +63,59 @@ Then, you need to save the file and then it is possible to execute the written c
 To run Javascript in Node JS, we need to open the terminal and type node fileName.js in the terminal, where fileName.js is the name of the file containing the Javascript code.
 
 ![Running Javascript in Node JS](../NodeJS/RunningNode.gif)
+
+# Javascript
+
+Bu konuda, Javascript hakkında bilgi edineceğiz.
+
+- [Javascript](#javascript)
+  - [Öğrenme Çıktıları](#öğrenme-çıktıları)
+  - [Javascript Nedir?](#javascript-nedir)
+  - [Javascript'in Tarihi](#javascriptin-tarihi)
+  - [Javascript'in Avantajları](#javascriptin-avantajları)
+  - [Javascript'in Dezavantajları](#javascriptin-dezavantajları)
+  - [Javascript Nasıl Çalıştırılır?](#javascript-nasıl-çalıştırılır)
+  - [Javascript Nasıl Yazılır?](#javascript-nasıl-yazılır)
+  - [Node JS ile Javascript Çalıştırma](#node-js-ile-javascript-çalıştırma)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra:
+
+- Javascript'in ne olduğunu tanımlayabileceksiniz.
+- Javascript'in avantajlarını listeleyebileceksiniz.
+- Javascript'in dezavantajlarını listeleyebileceksiniz.
+- Node JS ile Javascript'in nasıl çalıştırıldığını açıklayabileceksiniz.
+
+## Javascript Nedir?
+
+Javascript, başlangıçta etkileşimli web sayfaları oluşturmak için tasarlanmış bir programlama dilidir. Geçmişte, Javascript yalnızca istemci tarafında (web tarayıcısında, *Front-End*) kullanılıyordu. Günümüzde, Javascript sunucu tarafında da (*Back-End*) NodeJS kullanılarak kullanılabilmektedir. Bu kursta Javascript kullanmamızın sebebi, aynı programlama dili ile hem istemci hem de sunucu tarafı geliştirmeyi öğrenmemize olanak sağlamasıdır.
+
+## Javascript'in Tarihi
+
+**Javascript**, 1995 yılında Brendan Eich tarafından yaratılmıştır. İlk olarak *Mocha* olarak adlandırılmış, ardından *LiveScript* ve sonunda *Javascript* adını almıştır. Javascript adı, o zamanlar *Java* çok popüler olduğu için seçilmiştir ve bu isim, Java geliştiricilerini Javascript kullanmaya teşvik etmek için kullanılmıştır.
+
+## Javascript'in Avantajları
+
+- Javascript öğrenmesi kolaydır.
+- Javascript kullanması kolaydır.
+- Javascript çok popülerdir.
+- Tüm büyük web tarayıcıları Javascript'i destekler.
+- Javascript ile başlamak çok kolaydır.
+- Javascript, hem istemci hem de sunucu tarafı geliştirme için kullanılabilir.
+
+## Javascript'in Dezavantajları
+
+- Javascript zayıf tipli bir dildir, yani bir değişkenin tipi programın çalışması sırasında değiştirilebilir.
+- Javascript derlenen bir dil değildir, yani kod çalıştırılmadan önce derlenmez.
+- Tip bilgisi eksikliğinden dolayı kod bazen anlaşılması zor olabilir.
+
+## Javascript Nasıl Çalıştırılır?
+
+Javascript'i çalıştırmanın birçok yolu vardır. Javascript kodunu bir dosyaya kaydedip Node JS kullanarak çalıştırabiliriz ya da tarayıcıda çalıştırabiliriz. Ayrıca tarayıcı konsolunda da Javascript kodu çalıştırabiliriz.
+
+## Javascript Nasıl Yazılır?
+
+Javascript yazmak için basit bir metin düzenleyici kullanabilirsiniz, ancak Javascript'i destekleyen özel bir kod düzenleyici kullanmanız önerilir. Kod yazmak için `.js` uzantısına sahip yeni bir dosya oluşturup kodunuzu bu dosyaya yazmanız gerekir.
+
+![Running Javascript in Node JS](../NodeJS/RunningNode.gif)

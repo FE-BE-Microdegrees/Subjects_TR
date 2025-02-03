@@ -177,4 +177,182 @@ Test your code by running the `index.js` file using the `node index.js` command.
 > myObject.myFunction();
 > ```
 
+# Modüller
+
+Bu konuda, Javascript'teki modülleri öğreneceğiz.
+
+- [Modüller](#moduller)
+  - [Öğrenme Çıktıları](#ogrenme-ciktilari)
+  - [Modül Nedir?](#modul-nedir)
+  - [Bir Modül Nasıl Export Edilir?](#bir-modul-nasil-export-edilir)
+  - [Bir Modül Nasıl Import Edilir?](#bir-modul-nasil-import-edilir)
+  - [Bir Modül Nasıl Kullanılır?](#bir-modul-nasil-kullanilir)
+  - [Modüllerin Kullanımıyla İlgili Örnek](#modullerin-kullanimi-ile-ilgili-ornek)
+  - [Alıştırmalar](#alistirmalar)
+    - [Alıştırma 1 - Temel Export ve Require](#alistirma-1---temel-export-ve-require)
+    - [Alıştırma 2 - Birden Fazla Fonksiyonu Export Etmek](#alistirma-2---birden-fazla-fonksiyonu-export-etmek)
+    - [Alıştırma 3 - Bir Obje Export Etmek](#alistirma-3---bir-obje-export-etmek)
+
+## Öğrenme Çıktıları
+
+Bu konuyu tamamladıktan sonra:
+
+- Bir modülün ne olduğunu tanımlayabileceksiniz
+- Bir modülün nasıl export edildiğini açıklayabileceksiniz
+- Bir modülün nasıl import edildiğini açıklayabileceksiniz
+- Bir modülün nasıl kullanıldığını açıklayabileceksiniz
+
+## Modül Nedir?
+
+Modül, başka Javascript dosyalarında tekrar kullanılabilecek kodları içeren bir Javascript dosyasıdır. Modüller, kodu mantıksal birimlere ayırmak ve programın diğer bölümlerinde tekrar kullanılmasını sağlamak için kullanılır. Modüller, tekrar kullanılabilir kod oluşturmak için kullanılır.
+
+## Bir Modül Nasıl Export Edilir?
+
+Bir modülü export etmek için, `module.exports` anahtar kelimesini ve ardından export etmek istediğimiz modülün adını kullanmamız gerekir. Örneğin, `myModule` adında bir modülü export etmek istersek, `module.exports myModule;` veya (birden fazla export varsa) `module.exports { myModule, myModule1 };` yazabiliriz.
+
+```javascript
+module.exports myModule; // myModule adında bir modül export et
+```
+veya
+```javascript
+module.exports { myModule, myModule1 }; // myModule ve myModule1 adında birden fazla modül export et
+```
+
+## Bir Modül Nasıl Import Edilir?
+
+Bir modülü import etmek için, `require` anahtar kelimesini ve ardından import etmek istediğimiz modül(ler)i içeren dosyanın adını kullanmamız gerekir. Örneğin, `moduleFileName.js` dosyasından `myModule` adında bir modülü import etmek istersek, `require('./moduleFileName');` yazabiliriz (buradaki `./` kısmı, modülü içeren dosyanın yolunu belirtmek için kullanılır).
+
+```javascript
+const myModule = require('./moduleFileName'); // `moduleFileName.js` dosyasından bir modül import et
+```
+veya
+```javascript
+import { myModule, myModule1 } from './moduleFileName'; // `moduleFileName.js` dosyasından myModule ve myModule1 adında birden fazla modül import et
+```
+
+## Bir Modül Nasıl Kullanılır?
+
+Bir modülü kullanmak için önce import etmemiz gerekir. Modülü import ettikten sonra, kodumuzda kullanabiliriz. Örneğin, `calculate` adında bir dosyamız olduğunu ve bu dosyada `add` adında bir fonksiyon olduğunu düşünelim. Bu modülü import edip şu şekilde kullanabiliriz:
+
+`calculate.js` dosyasının içeriği şu şekilde olabilir:
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+module.exports = { add, subtract }; // add ve subtract fonksiyonlarını export et
+```
+
+`index.js` dosyasının içeriği şu şekilde olabilir:
+
+```javascript
+const calculate = require('./calculate'); // calculate modülünü import et
+
+const sum = calculate.add(5, 3); // calculate modülünden add fonksiyonunu çağır ve sonucu sum değişkenine ata
+
+console.log(sum); // sum değişkeninin değerini konsola yazdır
+```
+
+## Modüllerin Kullanımıyla İlgili Örnek
+
+Bir `index.js` dosyası oluşturun, bir `calculate.js` dosyası oluşturun, `calculate.js` dosyasından `add` ve `subtract` fonksiyonlarını export edin, `index.js` dosyasına `calculate.js` dosyasını import edin ve kodunuzda `add` fonksiyonunu kullanın.
+
+![Modül Kullanımı](UsingModule.gif)
+
+[Videoyu indirmek için buraya tıklayın](UsingModule.mp4)
+
+## Alıştırmalar
+
+Aşağıda belirtilen alıştırmalarda tanımlanan dosyaları oluşturun.
+
+Kodunuzu `node index.js` komutunu kullanarak çalıştırarak test edin.
+
+### Alıştırma 1 - Temel Export ve Require
+
+**Amaç**: Temel bir modül oluşturun ve import edin.
+
+**Açıklama**: `greetings.js` ve `index.js` adında iki dosya oluşturun. `greetings.js` dosyasında "Hello, World!" mesajını konsola yazdıran bir fonksiyon tanımlayın. Bu fonksiyonu export edin. `index.js` dosyasında `greetings.js` dosyasını import edin ve import edilen fonksiyonu çağırın.
+
+> İpucu: Fonksiyonu export etmek için `module.exports` anahtar kelimesini kullanmayı unutmayın.
+>
+> İpucu: Fonksiyonu import etmek için `require` anahtar kelimesini kullanın.
+
+<details>
+  <summary>Çözüm</summary>
+
+  ```javascript
+  // greetings.js
+  function sayHello() {
+    console.log('Hello, World!');
+  }
+
+  module.exports = sayHello;
+  ```
+
+  ```javascript
+  // index.js
+  const sayHello = require('./greetings');
+
+  sayHello();
+  ```
+![Modüller](modules.gif)
+</details>
+
+### Alıştırma 2 - Birden Fazla Fonksiyonu Export Etmek
+
+**Amaç**: Bir modülden birden fazla fonksiyon export edin.
+
+**Açıklama**: `greetings.js` ve `index.js` adında iki dosya oluşturun. `greetings.js` dosyasında biri "Hello, World!" mesajını konsola yazdıran, diğeri ise bir isim alıp "Hello, [isim]!" mesajını konsola yazdıran iki fonksiyon tanımlayın. Bu iki fonksiyonu export edin. `index.js` dosyasında `greetings.js` dosyasını import edin ve import edilen fonksiyonları çağırın.
+
+> İpucu: Birden fazla fonksiyonu export etmek için `module.exports` anahtar kelimesini ve bir obje kullanabilirsiniz.
+
+<details>
+  <summary>Çözüm</summary>
+
+  ```javascript
+  // greetings.js
+  function sayHello() {
+    console.log('Hello, World!');
+  }
+
+  function sayHelloTo(name) {
+    console.log(`Hello, ${name}!`);
+  }
+
+  module.exports = { sayHello, sayHelloTo };
+  ```
+
+  ```javascript
+  // index.js
+  const { sayHello, sayHelloTo } = require('./greetings');
+
+  sayHello();
+  sayHelloTo('John');
+  ```
+</details>
+
+### Alıştırma 3 - Bir Obje Export Etmek
+
+**Amaç**: Birden fazla metot içeren bir obje export edin.
+
+**Açıklama**: `utils.js` adında bir dosya oluşturun ve bu dosyada bir obje tanımlayın. Bu obje, `square` (bir sayının karesini döndüren) ve `cube` (bir sayının küpünü döndüren) metotlarını içersin. Bu objeyi export edin. `index.js` dosyasında bu objeyi import edin ve metotlarını çağırın.
+
+> İpucu: Fonksiyonları bir objeye şu şekilde ekleyebilirsiniz:
+> ```javascript
+> const myObject = {
+>   myFunction() {
+>     // fonksiyon içeriği
+>   }
+> }
+> ```
+>
+> İpucu: Bir objeden bir fonksiyonu şu şekilde çağırabilirsiniz:
+> ```javascript
+> myObject.myFunction();
+> 
 
